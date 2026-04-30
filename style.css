@@ -1,0 +1,92 @@
+@media screen and (max-width: 800px) {
+    body { display: flex; flex-direction: column; align-items: center; padding: 10px; background: white; }
+    .page { width: 100%; padding: 1.5cm; min-height: auto; page-break-after: auto; box-shadow: none; }
+    .sumario-item { display: flex; flex-direction: column; margin-bottom: 10px; }
+    .sumario-pontos { display: none; }
+    .table-autores, .table-capa { display: grid; grid-template-columns: 1fr; width: 100%; }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #525659;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: black;
+}
+
+.page {
+    background-color: white;
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 3cm 2cm 2cm 3cm; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+p { text-align: justify; line-height: 1.5; margin-bottom: 0.5cm; }
+.paragrafo { text-indent: 1.5cm; }
+
+ul { list-style-type: disc; margin-left: 1.5cm; margin-bottom: 0.5cm; }
+li { text-align: justify; line-height: 1.5; margin-bottom: 0.2cm; }
+
+h1, h2, h3, h4 { font-size: 12pt; font-weight: bold; text-align: left; margin-bottom: 1.5rem; }
+h1, h2 { text-transform: uppercase; }
+
+.center { text-align: center; }
+.uppercase { text-transform: uppercase; }
+
+table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 11pt; }
+table, th, td { border: 1px solid black; }
+th { background-color: #f4f4f4; padding: 10px; text-align: center; }
+td { padding: 10px; text-align: left; vertical-align: middle; }
+
+.table-autores { width: 75%; margin: 0 auto; }
+.table-capa { width: 75%; margin: 0 auto; border: none; }
+.table-capa th, .table-capa td { border: none; padding: 4px 8px; background-color: transparent;}
+
+.sumario-container { width: 100%; margin-top: 1cm; }
+.sumario-item { display: flex; align-items: baseline; margin-bottom: 0.2cm; font-size: 12pt; }
+.sumario-titulo { white-space: nowrap; }
+.sumario-recuo-1 { padding-left: 0.7cm; }
+.sumario-recuo-2 { padding-left: 1.4cm; }
+.sumario-pontos { flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 5px; }
+.sumario-pagina { white-space: nowrap; }
+.sumario-link { text-decoration: none; color: inherit; display: block; width: 100%; }
+.sumario-link:hover .sumario-titulo { text-decoration: underline; cursor: pointer; }
+
+.ref-link { color: inherit; transition: color 0.2s; }
+.ref-link:hover { color: #2f81f7; }
+
+.diagrama-container { text-align: center; margin: 1cm 0; }
+.diagrama-img { max-width: 100%; max-height: 18cm; object-fit: contain; margin-bottom: 0.2cm; }
+.legenda-topo { font-size: 10pt; font-weight: bold; text-align: center; margin-bottom: 0.2cm; }
+.legenda-fonte { font-size: 10pt; text-align: center; }
+
+.logo-unip { display: block; margin: 0 auto 0.5cm auto; width: 6cm; }
+.capa-header { text-align: center; line-height: 1.5; margin-bottom: 2cm; }
+.capa-titulo { text-align: center; font-weight: bold; margin-top: 3cm; margin-bottom: 3cm; }
+.capa-footer { position: absolute; bottom: 2cm; left: 3cm; right: 2cm; text-align: center; line-height: 1.5; }
+.recuo-rosto { margin-left: 8cm; text-align: justify; line-height: 1.5; font-size: 12pt; }
+.num-pagina { position: absolute; top: 2cm; right: 2cm; font-size: 10pt; }
+
+.code-box {
+    background-color: #f4f4f4;
+    border-left: 5px solid #333;
+    padding: 15px;
+    margin-bottom: 1cm;
+    border-radius: 0 8px 8px 0;
+    color: #000;
+}
+.code-box pre { white-space: pre-wrap; word-wrap: break-word; color: #000; font-family: 'Courier New', Courier, monospace; font-size: 9pt;}
+
+@media print {
+    @page { size: A4; margin: 0; }
+    body { background-color: white; padding: 0; gap: 0; }
+    .page { box-shadow: none; margin: 0; page-break-after: always; height: 29.7cm; }
+}
