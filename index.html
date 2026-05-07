@@ -110,7 +110,14 @@
 
         <h2 id="sec-2">2 DESENVOLVIMENTO</h2>
         <h3 id="sec-2-1">2.1 Etapa 1 – Definição e caracterização do negócio fictício</h3>
-        <p class="paragrafo">A Nex_TI opera como Software as a Service (SaaS), fornecendo painéis gerenciais e métricas de proficiência. O foco principal é solucionar a evasão e a baixa retenção de dados técnicos em capacitações de médio a longo prazo.</p>
+        <p class="paragrafo">Para estabelecer o contexto organizacional exigido no projeto, a Nex_TI foi concebida como uma startup de tecnologia educacional (EdTech). Suas características principais foram consolidadas para atender aos requisitos de mercado e solucionar lacunas de aprendizagem.</p>
+        <ul style="margin-left: 1cm; margin-bottom: 0.5cm; font-size: 11pt;">
+            <li><strong>Denominação da Empresa:</strong> Nex_TI Educacional.</li>
+            <li><strong>Segmento de Atuação:</strong> Tecnologia Educacional (EdTech) / Software as a Service (SaaS).</li>
+            <li><strong>Público-Alvo:</strong> Instituições de ensino (B2B) e estudantes/profissionais (B2C) que necessitam de ferramentas de memorização e nivelamento.</li>
+            <li><strong>Produtos Oferecidos:</strong> Plataforma web gamificada com motor de repetição espaçada (SM-2), simulados interativos e relatórios de desempenho.</li>
+            <li><strong>Problemas que Justificam o Sistema:</strong> Elevada evasão de alunos por desmotivação, baixa retenção de conhecimento técnico a longo prazo e ausência de métricas precisas para acompanhamento de evolução.</li>
+        </ul>
         
         <h4 id="sec-2-1-1">2.1.1 Regras de Negócio</h4>
         <p class="paragrafo">Para balizar a integridade do sistema, as regras fundamentais foram consolidadas na tabela a seguir:</p>
@@ -140,31 +147,40 @@
 
     <section class="page">
         <span class="num-pagina">8</span>
-        <h3 id="sec-2-2">2.2 Etapa 2 – Engenharia de Software Ágil Aplicada</h3>
-        <p class="paragrafo">A análise utilizou as cerimônias das metodologias Scrum e Kanban. Este controle garantiu o alinhamento de entregas, mensurando o esforço da equipe e assegurando a rastreabilidade exigida por padrões de qualidade como o MPS.BR.</p>
+        <h3 id="sec-2-2">2.2 Etapa 2 – Engenharia de Software Ágil Aplicada e LGPD</h3>
+        <p class="paragrafo">A análise de requisitos e o ciclo de vida do software utilizaram as metodologias Scrum e Kanban, garantindo alinhamento de entregas e rastreabilidade. Em conformidade com a <strong>Lei Geral de Proteção de Dados (LGPD)</strong>, o sistema exige o consentimento explícito para tratamento de dados pessoais, aplica anonimização em relatórios estatísticos e utiliza hash criptográfico para armazenamento de credenciais.</p>
 
         <h4 id="sec-2-2-1">2.2.1 Requisitos Funcionais e Não Funcionais</h4>
-        <p class="paragrafo">Os requisitos foram divididos entre o escopo imediato do MVP e as implementações previstas para evoluções futuras do software.</p>
+        <p class="paragrafo">A engenharia de requisitos dividiu o escopo do sistema de acordo com a prioridade de entrega (MVP) e implementações estruturais futuras. Para melhor legibilidade técnica, os requisitos foram categorizados em duas frentes distintas.</p>
         
+        <p style="margin-top: 0.5cm; margin-bottom: 0.2cm; font-weight: bold;">Tabela 1 – Requisitos Funcionais (RF)</p>
         <table>
             <tr>
-                <th width="10%">ID</th>
-                <th width="15%">Tipo</th>
-                <th width="60%">Descrição do Requisito</th>
+                <th width="12%">ID</th>
+                <th width="73%">Descrição do Requisito</th>
                 <th width="15%">Fase</th>
             </tr>
-            <tr><td class="center">RF01</td><td class="center">Funcional</td><td>Gestão de autenticação e perfis de sessão (Aluno, Tutor, Admin).</td><td class="center">MVP</td></tr>
-            <tr><td class="center">RF02</td><td class="center">Funcional</td><td>Motor algorítmico SM-2 para calcular os intervalos de revisão.</td><td class="center">MVP</td></tr>
-            <tr><td class="center">RF03</td><td class="center">Funcional</td><td>Interface interativa para estudo de flashcards frente e verso.</td><td class="center">MVP</td></tr>
-            <tr><td class="center">RF04</td><td class="center">Funcional</td><td>CRUD completo para criação e gestão de flashcards pelo usuário.</td><td class="center">MVP</td></tr>
-            <tr><td class="center">RF06</td><td class="center">Funcional</td><td>Módulo de gamificação para contabilizar e exibir XP e nível.</td><td class="center">MVP</td></tr>
-            <tr><td class="center">RNF01</td><td class="center">Não Func.</td><td>Armazenamento provisório local no cliente (LocalStorage).</td><td class="center">MVP</td></tr>
-            <tr><td class="center">RNF03</td><td class="center">Não Func.</td><td>Responsividade estrita via CSS Grid e Flexbox.</td><td class="center">MVP</td></tr>
-            <tr><td class="center">RNF04</td><td class="center">Não Func.</td><td>Acessibilidade implementada através de atributos nativos WAI-ARIA.</td><td class="center">MVP</td></tr>
-            <tr><td class="center">RF05</td><td class="center">Funcional</td><td>Módulo preparatório complexo (banco de questões tipo ENADE).</td><td class="center">Futuro</td></tr>
-            <tr><td class="center">RF07</td><td class="center">Funcional</td><td>Loja virtual para consumo de moedas e desbloqueio de áreas.</td><td class="center">Futuro</td></tr>
-            <tr><td class="center">RF08</td><td class="center">Funcional</td><td>Dashboard gerencial de métricas para tutores.</td><td class="center">Futuro</td></tr>
-            <tr><td class="center">RNF07</td><td class="center">Não Func.</td><td>Migração para banco SQL Server em nuvem e autenticação via JWT.</td><td class="center">Futuro</td></tr>
+            <tr><td class="center">RF01</td><td>Gestão de autenticação e definição de perfis de sessão (Aluno, Tutor, Admin).</td><td class="center">MVP</td></tr>
+            <tr><td class="center">RF02</td><td>Motor algorítmico SM-2 para calcular automaticamente os intervalos de revisão.</td><td class="center">MVP</td></tr>
+            <tr><td class="center">RF03</td><td>Interface iterativa para estudo gamificado de flashcards (frente e verso).</td><td class="center">MVP</td></tr>
+            <tr><td class="center">RF04</td><td>CRUD completo para criação, edição e exclusão de decks de flashcards.</td><td class="center">MVP</td></tr>
+            <tr><td class="center">RF05</td><td>Módulo de gamificação para contabilizar e exibir XP e evolução de nível.</td><td class="center">MVP</td></tr>
+            <tr><td class="center">RF06</td><td>Dashboard gerencial com gráficos de retenção e métricas de alunos (Tutor).</td><td class="center">Futuro</td></tr>
+            <tr><td class="center">RF07</td><td>Módulo preparatório complexo integrado com banco de questões de múltipla escolha.</td><td class="center">Futuro</td></tr>
+            <tr><td class="center">RF08</td><td>Loja virtual para consumo de moedas e desbloqueio de módulos avançados.</td><td class="center">Futuro</td></tr>
+        </table>
+
+        <p style="margin-top: 0.8cm; margin-bottom: 0.2cm; font-weight: bold;">Tabela 2 – Requisitos Não Funcionais (RNF)</p>
+        <table style="margin-bottom: 1cm;">
+            <tr>
+                <th width="12%">ID</th>
+                <th width="73%">Descrição do Requisito</th>
+                <th width="15%">Fase</th>
+            </tr>
+            <tr><td class="center">RNF01</td><td>Responsividade estrita (Mobile First) utilizando nativamente CSS Grid e Flexbox.</td><td class="center">MVP</td></tr>
+            <tr><td class="center">RNF02</td><td>Acessibilidade digital e suporte a leitores de tela através de atributos WAI-ARIA.</td><td class="center">MVP</td></tr>
+            <tr><td class="center">RNF03</td><td>Persistência primária de estados via sessão e LocalStorage do navegador.</td><td class="center">MVP</td></tr>
+            <tr><td class="center">RNF04</td><td>Integração relacional no SQL Server com proteção de senhas via Hash (LGPD).</td><td class="center">Futuro</td></tr>
         </table>
     </section>
 
@@ -179,7 +195,7 @@
         <div class="diagrama-container" style="margin-top: 0.5cm;">
             <p class="legenda-topo">Figura 1 – Quadro Kanban no Trello: Backlog</p>
             <img src="assets/kanban/Trello 01.png" alt="Quadro Trello - Backlog" class="diagrama-img" style="max-height: 12cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+1+-+Quadro+Kanban'">
-            <p class="legenda-fonte">Fonte: Criado pelos autores, 2026.</p>
+            <p class="legenda-fonte">Fonte: Autores, 2026.</p>
         </div>
     </section>
 
@@ -189,14 +205,14 @@
         <div class="diagrama-container" style="margin-top: 1cm;">
             <p class="legenda-topo">Figura 2 – Quadro Kanban no Trello: Execução</p>
             <img src="assets/kanban/Trello 02.png" alt="Quadro Trello - Execução" class="diagrama-img" style="max-height: 14cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+2+-+Quadro+Kanban'">
-            <p class="legenda-fonte">Fonte: Criado pelos autores, 2026.</p>
+            <p class="legenda-fonte">Fonte: Autores, 2026.</p>
         </div>
     </section>
 
     <section class="page" aria-label="Banco de Dados">
         <span class="num-pagina">11</span>
         <h3 id="sec-2-3">2.3 Etapa 3 – Modelagem de Banco de Dados e NoSQL</h3>
-        <p class="paragrafo">A estrutura relacional para o SQL Server foi elaborada para integrar o fluxo de gamificação à complexidade de um banco de questões preparatórias, garantindo integridade referencial e segurança conforme a LGPD, com proteção de senhas via Hash.</p>
+        <p class="paragrafo">Conforme a fundamentação teórica de sistemas de informação, optou-se pela utilização de Banco de Dados Relacional (SQL Server) para garantir as propriedades ACID (Atomicidade, Consistência, Isolamento e Durabilidade) no processamento das transações de moedas virtuais e XP. A estrutura relacional foi elaborada para integrar o fluxo de gamificação à complexidade de um banco de questões preparatórias, garantindo integridade referencial e segurança conforme os preceitos da LGPD.</p>
 
         <h4 style="margin-bottom: 0.5cm;">Dicionário de Dados Resumido</h4>
         <table>
@@ -236,13 +252,13 @@
         <div class="diagrama-container" style="margin-top: 0.5cm; margin-bottom: 0.5cm;">
             <p class="legenda-topo">Figura 3 – Diagrama DER (Corte 1 - Gamificação e Usuários)</p>
             <img src="assets/diagrams/DER_Parte1.png" alt="DER Corte 1" class="diagrama-img" style="max-height: 10cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+3+-+DER+Corte+1'">
-            <p class="legenda-fonte">Fonte: Criado pelos autores, 2026.</p>
+            <p class="legenda-fonte">Fonte: Autores, 2026.</p>
         </div>
         
         <div class="diagrama-container" style="margin-top: 0.5cm; margin-bottom: 0.5cm;">
             <p class="legenda-topo">Figura 4 – Diagrama DER (Corte 2 - Módulo de Questões)</p>
             <img src="assets/diagrams/DER_Parte2.png" alt="DER Corte 2" class="diagrama-img" style="max-height: 10cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+4+-+DER+Corte+2'">
-            <p class="legenda-fonte">Fonte: Criado pelos autores, 2026.</p>
+            <p class="legenda-fonte">Fonte: Autores, 2026.</p>
         </div>
     </section>
 
@@ -279,7 +295,7 @@ CREATE TABLE tb_provas (
     ano INT NOT NULL, tipo VARCHAR(50) NOT NULL
 );</code></pre>
         </div>
-        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 0;">Fonte: Criado pelos autores, 2026.</p>
+        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 0;">Fonte: Autores, 2026.</p>
     </section>
 
     <section class="page" aria-label="DDL 2">
@@ -324,13 +340,13 @@ CREATE TABLE tb_prova_questao (
     CONSTRAINT FK_PQ_Q FOREIGN KEY (id_questao) REFERENCES tb_questoes(id_questao)
 );</code></pre>
         </div>
-        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 1cm;">Fonte: Criado pelos autores, 2026.</p>
+        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 1cm;">Fonte: Autores, 2026.</p>
     </section>
 
     <section class="page" aria-label="POO Parte 1">
         <span class="num-pagina">15</span>
         <h3 id="sec-2-4">2.4 Etapa 4 – Desenvolvimento do sistema com POO (C#)</h3>
-        <p class="paragrafo">A estrutura lógica foi modelada em C# (.NET 10) utilizando estritamente a Programação Orientada a Objetos. A superclasse Usuário garante abstração e encapsula dados sensíveis (Figura 7).</p>
+        <p class="paragrafo">A estrutura lógica foi modelada em C# (.NET 10) fundamentada nos quatro pilares da Programação Orientada a Objetos: <strong>Abstração, Encapsulamento, Herança e Polimorfismo</strong>. A superclasse Usuário garante a abstração de comportamentos em comum e encapsula propriedades sensíveis, restringindo alterações não autorizadas ao estado do objeto (Figura 7).</p>
         
         <div class="code-box">
             <pre><code>Figura 7 – Classe Base em C#
@@ -353,7 +369,7 @@ namespace PIM_III {
     }
 }</code></pre>
         </div>
-        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 1cm;">Fonte: Criado pelos autores, 2026.</p>
+        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 1cm;">Fonte: Autores, 2026.</p>
     </section>
 
     <section class="page" aria-label="POO Parte 2">
@@ -382,7 +398,7 @@ namespace PIM_III {
     }
 }</code></pre>
         </div>
-        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 1cm;">Fonte: Criado pelos autores, 2026.</p>
+        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 1cm;">Fonte: Autores, 2026.</p>
     </section>
 
     <section class="page" aria-label="POO Parte 3">
@@ -408,7 +424,7 @@ public class Program {
     }
 }</code></pre>
         </div>
-        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 1cm;">Fonte: Criado pelos autores, 2026.</p>
+        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 1cm;">Fonte: Autores, 2026.</p>
     </section>
 
     <section class="page" aria-label="Web Responsivo">
@@ -435,18 +451,24 @@ public class Program {
                 <td>Transição adaptativa do layout para suporte a tablets e dispositivos menores sem bibliotecas externas.</td>
             </tr>
         </table>
-        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 0;">Fonte: Criado pelos autores, 2026.</p>
+        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 0;">Fonte: Autores, 2026.</p>
     </section>
 
     <section class="page" aria-label="UX UI 1">
         <span class="num-pagina">19</span>
         <h3 id="sec-2-6">2.6 Etapa 6 – UX e UI Design</h3>
-        <p class="paragrafo">A prototipagem baseou-se nas heurísticas de visibilidade de sistema e prevenção de erros. O design utilizou affordance clara nos botões para reduzir a carga cognitiva, exibindo dinamicamente métricas vitais como XP acumulado. As telas estruturais foram projetadas no Figma.</p>
+        <p class="paragrafo">Para guiar as decisões de usabilidade e arquitetura de informação, foi modelada a <strong>Persona</strong> principal do sistema, refletindo com exatidão o público-alvo da plataforma:</p>
+        <ul style="margin-left: 1cm; margin-bottom: 0.5cm; font-size: 11pt;">
+            <li><strong>Persona Principal:</strong> Jovem de 18 a 20 anos, com o ensino médio recém-concluído.</li>
+            <li><strong>Perfil e Dores:</strong> Possui grande interesse em ingressar na área de tecnologia, mas enfrenta insegurança diante da enorme quantidade de jargões técnicos e da complexidade inicial das disciplinas abordadas nos cursos superiores de TI.</li>
+            <li><strong>A Jornada na Nex_TI:</strong> Utiliza a plataforma como ferramenta de nivelamento. Através de flashcards de nível introdutório e repetição espaçada, familiariza-se gradativamente com os fundamentos da área. A gamificação (XP e moedas) reduz a frustração comum no aprendizado inicial, mantendo o engajamento diário.</li>
+        </ul>
+        <p class="paragrafo">Com essa jornada de um usuário iniciante em mente, a prototipagem seguiu as heurísticas de Nielsen. A interface conta com <em>affordance</em> clara nos botões e contraste adequado para evitar sobrecarga cognitiva, garantindo que o foco permaneça estritamente no aprendizado introdutório. As telas foram elaboradas no Figma.</p>
 
         <div class="diagrama-container" style="margin-top: 0.5cm;">
             <p class="legenda-topo">Figura 10 – Protótipo: Login e Acesso</p>
             <img src="assets/prototypes/Prototipo_Login.png" alt="Tela de Login" class="diagrama-img" style="max-height: 10cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+10+-+Login'">
-            <p class="legenda-fonte">Fonte: Criado pelos autores, 2026.</p>
+            <p class="legenda-fonte">Fonte: Autores, 2026.</p>
         </div>
     </section>
 
@@ -455,20 +477,20 @@ public class Program {
         <div class="diagrama-container">
             <p class="legenda-topo">Figura 11 – Protótipo: Cadastro de Usuário</p>
             <img src="assets/prototypes/Prototipo_Cadastro.png" alt="Tela de Cadastro" class="diagrama-img" style="max-height: 10cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+11+-+Cadastro'">
-            <p class="legenda-fonte">Fonte: Criado pelos autores, 2026.</p>
+            <p class="legenda-fonte">Fonte: Autores, 2026.</p>
         </div>
         
         <div class="diagrama-container" style="margin-top: 1cm;">
             <p class="legenda-topo">Figura 12 – Protótipo: Nivelamento Inicial</p>
             <img src="assets/prototypes/Prototipo_Nivelamento.png" alt="Tela de Nivelamento" class="diagrama-img" style="max-height: 10cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+12+-+Nivelamento'">
-            <p class="legenda-fonte">Fonte: Criado pelos autores, 2026.</p>
+            <p class="legenda-fonte">Fonte: Autores, 2026.</p>
         </div>
     </section>
 
     <section class="page" aria-label="Acessibilidade e ML">
         <span class="num-pagina">21</span>
         <h3 id="sec-2-7">2.7 Etapa 7 – Machine Learning e Análise de Dados</h3>
-        <p class="paragrafo">A inteligência provisória implementada reside no algoritmo matemático SM-2. Desenvolvido em JavaScript, ele analisa as respostas do aluno e ajusta as datas de retomada do conteúdo, gerando arquivos de retenção otimizados para futura análise via machine learning global.</p>
+        <p class="paragrafo">A aplicação gera inteligência a partir dos dados através do algoritmo matemático SM-2. Ele analisa indicadores de desempenho do usuário, como acurácia e tempo de resposta, e ajusta as datas de retomada do conteúdo (repetição espaçada). Futuramente, estes relatórios estruturados alimentarão modelos de <em>machine learning</em> globais para predição de risco de reprovação e recomendação preditiva de trilhas de estudo.</p>
         
         <h3 id="sec-2-8">2.8 Etapa 8 – Comunicação e LIBRAS</h3>
         <p class="paragrafo">Garantindo a acessibilidade digital, o projeto integrou atributos essenciais da iniciativa WAI-ARIA. O sistema apresenta leitura de rótulos por software assistivo (aria-label), indicativos nativos de processamento e opções de redimensionamento e contraste exigidos pelas normativas inclusivas.</p>
@@ -484,7 +506,7 @@ public class Program {
         <div class="diagrama-container" style="margin-top: 0.5cm;">
             <p class="legenda-topo">Figura 13 – Diagrama de Casos de Uso (Corte 1 - Atores Principais)</p>
             <img src="assets/diagrams/UseCase_Corte1.png" alt="Caso de Uso Corte 1" class="diagrama-img" style="max-height: 10cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+13+-+Caso+Uso'">
-            <p class="legenda-fonte">Fonte: Criado pelos autores, 2026.</p>
+            <p class="legenda-fonte">Fonte: Autores, 2026.</p>
         </div>
     </section>
 
@@ -495,7 +517,7 @@ public class Program {
         <div class="diagrama-container" style="margin-top: 1cm;">
             <p class="legenda-topo">Figura 14 – Diagrama de Classes (Corte 1 - Assinatura Resumida)</p>
             <img src="assets/diagrams/ClassDiagram_Corte1.png" alt="Diagrama de Classes Corte 1" class="diagrama-img" style="max-height: 12cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+14+-+Classes+Corte+1'">
-            <p class="legenda-fonte">Fonte: Criado pelos autores, 2026.</p>
+            <p class="legenda-fonte">Fonte: Autores, 2026.</p>
         </div>
     </section>
 
@@ -506,7 +528,7 @@ public class Program {
         <div class="diagrama-container" style="margin-top: 1cm;">
             <p class="legenda-topo">Figura 15 – Diagrama de Sequência (Corte 1 - Fluxo de Avaliação)</p>
             <img src="assets/diagrams/Sequence_Corte1.png" alt="Diagrama de Sequencia Corte 1" class="diagrama-img" style="max-height: 14cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+15+-+Sequencia+Corte+1'">
-            <p class="legenda-fonte">Fonte: Criado pelos autores, 2026.</p>
+            <p class="legenda-fonte">Fonte: Autores, 2026.</p>
         </div>
     </section>
 

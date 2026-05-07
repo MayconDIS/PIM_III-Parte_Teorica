@@ -3,63 +3,69 @@
 ---
 ## English Version
 
-# Project: Structural and Semantic Refactoring of PIM_III Document
+# Project: Alinhamento e Finalização do Documento PIM III (Nex_TI)
 
 ### What This Is
-This project aims to refactor the academic document `index.html` (Nex_TI platform), focusing on separation of concerns (Clean Code) and semantic technical improvements, without altering the underlying text or existing design.
+Este projeto visa a consolidação, refatoração e expansão técnica do documento acadêmico `index.html` (plataforma Nex_TI) para atender estritamente a todas as 9 Etapas exigidas pelo Manual do PIM III (2026) da UNIP, mantendo um design limpo, acessível (WAI-ARIA) e livre de prolixidade.
 
 ### Core Value
-Ensure that the project documentation reflects technical professionalism, facilitating future editing by separating CSS and ensuring maximum accessibility standards (W3C/WAI-ARIA) in HTML.
+Garantir que a documentação técnica sirva simultaneamente como um artefato acadêmico avaliativo (Normas ABNT, LGPD, Metodologias Ágeis) e um relatório técnico profissional (GSD/Clean Code), facilitando a leitura de código, diagramas UML e protótipos de UX.
 
 ### Requirements
 
 #### Validated
-- ✓ The original document structure (`index.html`) and its textual content.
-- ✓ Current visual formatting and design.
+- ✓ A estrutura original do documento (`index.html`) modularizada com `style.css`.
+- ✓ Refatoração das marcações HTML5 Semânticas e Acessibilidade.
+- ✓ Redação inicial das etapas tecnológicas (POO, Banco de Dados, Ágil, Front-end).
 
 #### Active
-- [x] Extraction of the stylesheet (`<style>`) from `index.html` into an external `style.css` file.
-- [x] Refactoring and enhancement of Semantic HTML5 tags.
-- [x] Deep review of accessibility tags (WAI-ARIA).
+- [x] Inserção do peso acadêmico nas Etapas (Teoria de BD Relacional, Pilares da POO).
+- [x] Integração da Persona (Jovem 18-20 anos) e alinhamento do UX/UI.
+- [ ] Exportação e integração das Imagens/Diagramas (Protótipos do Figma, Diagramas Astah) para a pasta `assets/`.
+- [ ] Revisão ortográfica e visual final do documento integrado.
 
 #### Out of Scope
-- Drastic UI alterations or color palette changes.
-- Addition of new textual chapters.
+- Migração forçada para o Microsoft Word (o HTML será o entregável visual central).
+- Alterações que fujam da stack técnica C#, SQL Server e SM-2.
 
 ### Key Decisions
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| CSS Separation | Externalizing into `style.css` keeps the HTML content-focused. | — Done |
-| Semantic & Accessible Refinement | The code will become an educational showcase of Front-end best practices. | — Done |
+| Escopo 2026 | A expansão textual é obrigatória para fechar o checklist do coordenador. | — Active |
+| Persona Neutra | UX focado em iniciantes e sem distinção de gênero (Alex/Jovem 18 anos). | — Done |
+| Rejeição do MS Word | Manter tudo no `index.html` preserva o controle de versão e o design sem quebras. | — Done |
 
 ---
 ## Versão em Português
 
-# Projeto: Refatoração Estrutural e Semântica do Documento PIM_III
+# Projeto: Alinhamento e Finalização do Documento PIM III (Nex_TI)
 
 ### What This Is
-Este projeto visa a refatoração do documento acadêmico `index.html` (plataforma Nex_TI), focando na separação de responsabilidades (Clean Code) e melhoria técnica semântica do código, sem alterar a base textual ou o design existente.
+Este projeto visa a consolidação, refatoração e expansão técnica do documento acadêmico `index.html` (plataforma Nex_TI) para atender estritamente a todas as Etapas exigidas pelo Manual do PIM III (2026) da UNIP, mantendo um design limpo, acessível (WAI-ARIA) e livre de prolixidade.
 
 ### Core Value
-Garantir que a documentação do projeto seja o reflexo do profissionalismo técnico, facilitando a edição futura com a separação do CSS e garantindo padrões máximos de acessibilidade (W3C/WAI-ARIA) no HTML.
+Garantir que a documentação técnica sirva simultaneamente como um artefato acadêmico avaliativo (Normas ABNT, LGPD, Metodologias Ágeis) e um relatório técnico profissional (GSD/Clean Code), facilitando a leitura de código, diagramas UML e protótipos de UX.
 
 ### Requirements
 
 #### Validated
-- ✓ A estrutura original do documento (`index.html`) e seus conteúdos textuais.
-- ✓ A formatação visual e design atual.
+- ✓ A estrutura original do documento (`index.html`) modularizada com `style.css`.
+- ✓ Refatoração das marcações HTML5 Semânticas e Acessibilidade.
+- ✓ Redação inicial das etapas tecnológicas (POO, Banco de Dados, Ágil, Front-end).
 
 #### Active
-- [x] Extração da folha de estilos (`<style>`) do `index.html` para um arquivo externo `style.css`.
-- [x] Refatoração e aprimoramento das marcações HTML5 Semânticas.
-- [x] Revisão profunda das tags de acessibilidade (WAI-ARIA).
+- [x] Inserção do peso acadêmico nas Etapas (Teoria de BD Relacional, Pilares da POO).
+- [x] Integração da Persona (Jovem 18-20 anos) e alinhamento do UX/UI.
+- [ ] Exportação e integração das Imagens/Diagramas (Protótipos do Figma, Diagramas Astah) para a pasta `assets/`.
+- [ ] Revisão ortográfica e visual final do documento integrado.
 
 #### Out of Scope
-- Alterações drásticas de UI ou mudança de paleta de cores.
-- Adição de novos capítulos textuais.
+- Migração forçada para o Microsoft Word (o HTML será o entregável visual central).
+- Alterações que fujam da stack técnica C#, SQL Server e SM-2.
 
 ### Key Decisions
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Separação do CSS | Externalizar em `style.css` deixa o HTML focado no conteúdo. | — Done |
-| Refino Semântico e Acessível | O código se tornará uma vitrine didática de boas práticas de Front-end. | — Done |
+| Escopo 2026 | A expansão textual é obrigatória para fechar o checklist do coordenador. | — Active |
+| Persona Neutra | UX focado em iniciantes e sem distinção de gênero (Alex/Jovem 18 anos). | — Done |
+| Rejeição do MS Word | Manter tudo no `index.html` preserva o controle de versão e o design sem quebras. | — Done |
