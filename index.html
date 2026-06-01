@@ -251,14 +251,24 @@
         <p class="paragrafo">Para assegurar a legibilidade e devido à quantidade de cardinalidades N:N mapeadas (como Prova x Questão), o modelo DER foi dividido em seções. A Figura 3 exibe o relacionamento do Motor Gamificado e de Usuários, com atributos focais e simplificados.</p>
 
         <div class="diagrama-container" style="margin-top: 0.5cm; margin-bottom: 0.5cm;">
-            <p class="legenda-topo">Figura 3 – Diagrama DER (Corte 1 - Gamificação e Usuários)</p>
-            <img src="assets/diagrams/DER_Parte1.png" alt="DER Corte 1" class="diagrama-img" style="max-height: 10cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+3+-+DER+Corte+1'">
-            <p class="legenda-fonte">Fonte: Autores, 2026.</p>
-        </div>
-        
-        <div class="diagrama-container" style="margin-top: 0.5cm; margin-bottom: 0.5cm;">
-            <p class="legenda-topo">Figura 4 – Diagrama DER (Corte 2 - Módulo de Questões)</p>
-            <img src="assets/diagrams/DER_Parte2.png" alt="DER Corte 2" class="diagrama-img" style="max-height: 10cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+4+-+DER+Corte+2'">
+            <div class="tabs-control" role="tablist" aria-label="Abas do Diagrama DER">
+                <button class="tab-btn active" role="tab" aria-selected="true" data-target="der-completo">Visão Geral</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-target="der-corte1">Corte 1: Gamificação e Usuários</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-target="der-corte2">Corte 2: Módulo de Questões</button>
+            </div>
+            
+            <div class="tab-content active" id="der-completo" role="tabpanel">
+                <p class="legenda-topo">Figura 3 – Diagrama DER: Visão Geral</p>
+                <img src="assets/diagrams/DER_Nex_TI.png" alt="DER Completo" class="diagrama-img" style="max-height: 12cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+3+-+DER+Completo'">
+            </div>
+            <div class="tab-content" id="der-corte1" role="tabpanel">
+                <p class="legenda-topo">Figura 3.1 – Diagrama DER: Corte 1 (Gamificação e Usuários)</p>
+                <img src="assets/diagrams/DER_Nex_TI 01.png" alt="DER Corte 1" class="diagrama-img" style="max-height: 12cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+3.1+-+DER+Corte+1'">
+            </div>
+            <div class="tab-content" id="der-corte2" role="tabpanel">
+                <p class="legenda-topo">Figura 3.2 – Diagrama DER: Corte 2 (Módulo de Questões)</p>
+                <img src="assets/diagrams/DER_Nex_TI 02.png" alt="DER Corte 2" class="diagrama-img" style="max-height: 12cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+3.2+-+DER+Corte+2'">
+            </div>
             <p class="legenda-fonte">Fonte: Autores, 2026.</p>
         </div>
     </section>
@@ -505,8 +515,24 @@ public class Program {
         <p class="paragrafo">A delimitação funcional das interações entre os atores do sistema (Aluno, Tutor e Admin) foi estabelecida nos Casos de Uso (Figura 13), restringindo claramente os privilégios operacionais na interface.</p>
 
         <div class="diagrama-container" style="margin-top: 0.5cm;">
-            <p class="legenda-topo">Figura 13 – Diagrama de Casos de Uso (Corte 1 - Atores Principais)</p>
-            <img src="assets/diagrams/UseCase_Corte1.png" alt="Caso de Uso Corte 1" class="diagrama-img" style="max-height: 10cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+13+-+Caso+Uso'">
+            <div class="tabs-control" role="tablist" aria-label="Abas do Diagrama de Casos de Uso">
+                <button class="tab-btn active" role="tab" aria-selected="true" data-target="usecase-completo">Visão Geral</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-target="usecase-corte1">Corte 1: Atores Principais</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-target="usecase-corte2">Corte 2: Fluxo do Aluno</button>
+            </div>
+            
+            <div class="tab-content active" id="usecase-completo" role="tabpanel">
+                <p class="legenda-topo">Figura 13 – Diagrama de Casos de Uso: Visão Geral</p>
+                <img src="assets/diagrams/UseCase Diagrams Nex_TI.png" alt="Caso de Uso Completo" class="diagrama-img" style="max-height: 12cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+13+-+Caso+Uso+Completo'">
+            </div>
+            <div class="tab-content" id="usecase-corte1" role="tabpanel">
+                <p class="legenda-topo">Figura 13.1 – Diagrama de Casos de Uso: Corte 1 (Atores Principais)</p>
+                <img src="assets/diagrams/UseCase Diagrams Nex_TI 01.png" alt="Caso de Uso Corte 1" class="diagrama-img" style="max-height: 12cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+13.1+-+Caso+Uso+Corte+1'">
+            </div>
+            <div class="tab-content" id="usecase-corte2" role="tabpanel">
+                <p class="legenda-topo">Figura 13.2 – Diagrama de Casos de Uso: Corte 2 (Fluxo do Aluno)</p>
+                <img src="assets/diagrams/UseCase Diagrams Nex_TI 02.png" alt="Caso de Uso Corte 2" class="diagrama-img" style="max-height: 12cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+13.2+-+Caso+Uso+Corte+2'">
+            </div>
             <p class="legenda-fonte">Fonte: Autores, 2026.</p>
         </div>
     </section>
@@ -516,8 +542,24 @@ public class Program {
         <p class="paragrafo">O diagrama de classes consolida a fundação estrutural do código-fonte, declarando as composições e dependências necessárias para sustentar as regras de economia virtual. A Figura 14 exibe um corte focado na herança simplificada de usuários e métodos essenciais.</p>
 
         <div class="diagrama-container" style="margin-top: 1cm;">
-            <p class="legenda-topo">Figura 14 – Diagrama de Classes (Corte 1 - Assinatura Resumida)</p>
-            <img src="assets/diagrams/ClassDiagram_Corte1.png" alt="Diagrama de Classes Corte 1" class="diagrama-img" style="max-height: 12cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+14+-+Classes+Corte+1'">
+            <div class="tabs-control" role="tablist" aria-label="Abas do Diagrama de Classes">
+                <button class="tab-btn active" role="tab" aria-selected="true" data-target="classes-completo">Visão Geral</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-target="classes-corte1">Corte 1: Assinatura de Métodos</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-target="classes-corte2">Corte 2: Atributos Detalhados</button>
+            </div>
+            
+            <div class="tab-content active" id="classes-completo" role="tabpanel">
+                <p class="legenda-topo">Figura 14 – Diagrama de Classes: Visão Geral</p>
+                <img src="assets/diagrams/Class Diagram Nex_TI.png" alt="Diagrama de Classes Completo" class="diagrama-img" style="max-height: 12cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+14+-+Classes+Completo'">
+            </div>
+            <div class="tab-content" id="classes-corte1" role="tabpanel">
+                <p class="legenda-topo">Figura 14.1 – Diagrama de Classes: Corte 1 (Assinatura de Métodos)</p>
+                <img src="assets/diagrams/Class Diagram Nex_TI 01.png" alt="Diagrama de Classes Corte 1" class="diagrama-img" style="max-height: 12cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+14.1+-+Classes+Corte+1'">
+            </div>
+            <div class="tab-content" id="classes-corte2" role="tabpanel">
+                <p class="legenda-topo">Figura 14.2 – Diagrama de Classes: Corte 2 (Atributos Detalhados)</p>
+                <img src="assets/diagrams/Class Diagram Nex_TI 02.png" alt="Diagrama de Classes Corte 2" class="diagrama-img" style="max-height: 12cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+14.2+-+Classes+Corte+2'">
+            </div>
             <p class="legenda-fonte">Fonte: Autores, 2026.</p>
         </div>
     </section>
@@ -527,8 +569,24 @@ public class Program {
         <p class="paragrafo">A validação temporal e o fluxo das regras de negócio foram mapeados pelo Diagrama de Sequência (Figura 15), ilustrando a interação do cliente web com as validações de servidor até a consolidação dos pontos de experiência.</p>
 
         <div class="diagrama-container" style="margin-top: 1cm;">
-            <p class="legenda-topo">Figura 15 – Diagrama de Sequência (Corte 1 - Fluxo de Avaliação)</p>
-            <img src="assets/diagrams/Sequence_Corte1.png" alt="Diagrama de Sequencia Corte 1" class="diagrama-img" style="max-height: 14cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+15+-+Sequencia+Corte+1'">
+            <div class="tabs-control" role="tablist" aria-label="Abas do Diagrama de Sequência">
+                <button class="tab-btn active" role="tab" aria-selected="true" data-target="sequence-completo">Visão Geral</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-target="sequence-corte1">Corte 1: Fluxo de Autenticação</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-target="sequence-corte2">Corte 2: Motor de Repetição (SM-2)</button>
+            </div>
+            
+            <div class="tab-content active" id="sequence-completo" role="tabpanel">
+                <p class="legenda-topo">Figura 15 – Diagrama de Sequência: Visão Geral</p>
+                <img src="assets/diagrams/Sequence Diagram Nex_TI.png" alt="Diagrama de Sequência Completo" class="diagrama-img" style="max-height: 14cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+15+-+Sequencia+Completa'">
+            </div>
+            <div class="tab-content" id="sequence-corte1" role="tabpanel">
+                <p class="legenda-topo">Figura 15.1 – Diagrama de Sequência: Corte 1 (Fluxo de Autenticação)</p>
+                <img src="assets/diagrams/Sequence Diagram Nex_TI 01.png" alt="Diagrama de Sequência Corte 1" class="diagrama-img" style="max-height: 14cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+15.1+-+Sequencia+Corte+1'">
+            </div>
+            <div class="tab-content" id="sequence-corte2" role="tabpanel">
+                <p class="legenda-topo">Figura 15.2 – Diagrama de Sequência: Corte 2 (Motor de Repetição - SM-2)</p>
+                <img src="assets/diagrams/Sequence Diagram Nex_TI 02.png" alt="Diagrama de Sequência Corte 2" class="diagrama-img" style="max-height: 14cm;" onerror="this.src='https://placehold.co/800x600/E8EAED/5F6368?text=Figura+15.2+-+Sequencia+Corte+2'">
+            </div>
             <p class="legenda-fonte">Fonte: Autores, 2026.</p>
         </div>
     </section>
@@ -597,5 +655,40 @@ public class Program {
 
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabsContainers = document.querySelectorAll('.diagrama-container');
+            
+            tabsContainers.forEach(container => {
+                const buttons = container.querySelectorAll('.tab-btn');
+                const contents = container.querySelectorAll('.tab-content');
+                
+                if (buttons.length === 0) return;
+                
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const targetId = button.getAttribute('data-target');
+                        
+                        // Atualiza estado ativo dos botões do contêiner
+                        buttons.forEach(btn => {
+                            btn.classList.remove('active');
+                            btn.setAttribute('aria-selected', 'false');
+                        });
+                        button.classList.add('active');
+                        button.setAttribute('aria-selected', 'true');
+                        
+                        // Atualiza exibição dos conteúdos do contêiner
+                        contents.forEach(content => {
+                            if (content.id === targetId) {
+                                content.classList.add('active');
+                            } else {
+                                content.classList.remove('active');
+                            }
+                        });
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

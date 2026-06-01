@@ -90,3 +90,56 @@ td { padding: 10px; text-align: left; vertical-align: middle; }
     body { background-color: white; padding: 0; gap: 0; }
     .page { box-shadow: none; margin: 0; page-break-after: always; height: 29.7cm; }
 }
+
+/* Abas Interativas dos Diagramas */
+.tabs-control {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tab-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 9pt;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.tab-btn.active {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+}
+
+@media print {
+    .tabs-control {
+        display: none !important;
+    }
+    .tab-content {
+        display: block !important;
+        opacity: 1 !important;
+        page-break-inside: avoid;
+        margin-bottom: 0.8cm;
+    }
+}
