@@ -21,7 +21,7 @@ O plano focou na consistência das informações e no alinhamento das datas de e
 - [x] Criar e ajustar as atas Scrum [reuniao_09.md](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/.planning/meetings/reuniao_09.md) e [reuniao_10.md](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/.planning/meetings/reuniao_10.md)
 - [x] Copiar as atas de reuniões Scrum (1 a 10) para o repositório prático em `PIM_III-Parte_Pratica/.planning/meetings/`
 - [x] Copiar as atas de reuniões Scrum (1 a 10) para o repositório UML em `PIM_III-Documentacao_UML/.planning/meetings/`
-- [x] Ajustar as dimensões das imagens (max-height de 7.0cm) e quebras de página rígidas (height: 29.7cm) no [style.css](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/style.css) com regras avoid
+- [x] Ajustar as dimensões das imagens (max-height de 4.5cm na impressão) e quebras de página flexíveis (height: auto) no [style.css](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/style.css) com regras avoid
 - [x] Commitar as alterações e novas atas no repositório `PIM_III-Documentacao_UML`
 - [x] Commitar as novas atas e manuais no repositório `PIM_III-Parte_Pratica`
 - [x] Commitar as alterações no repositório `PIM_III-Parte_Teorica`
