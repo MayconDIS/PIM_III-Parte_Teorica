@@ -1,18 +1,16 @@
 # Fase 3: Sincronização do Ecossistema Nex_TI (Três Repositórios)
 
-Esta fase contemplou a sincronização profunda e padronização conceitual entre os três repositórios complementares que constituem o projeto **Nex_TI** para o PIM III da UNIP:
-1. [PIM_III-Parte_Teorica](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica) (Monografia/Relatório)
-2. [PIM_III-Parte_Pratica](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Pratica) (Sistema Fullstack)
-3. [PIM_III-Documentacao_UML](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Documentacao_UML) (Diagramas e Atas)
+Esta fase teve como objetivo sincronizar as atas de reuniões Scrum, o Product Backlog e delimitar o escopo semestral nos três repositórios do projeto **Nex_TI** (Teórico, Prático e UML).
 
 ---
 
 ## 📋 Plano de Implementação
 
-O objetivo foi garantir a uniformidade das informações técnicas, dados de datas, nomes de autores e atas de reuniões Scrum para a banca avaliadora:
-1. **Atas de Reuniões Informais (Meetings de 1 a 10)**: Unificar as atas baseadas em Scrum registradas de forma informal na pasta `.planning/meetings/` em todos os repositórios (incluindo as reuniões 9 e 10 realizadas em domingos).
-2. **Sincronização de Backlog e Documentos**: Copiar os markdowns corrigidos de backlog do produto e atas de planejamento da Parte Teórica para a pasta `01_Documentacao_Teorica/` de UML, removendo os arquivos PDF obsoletos e desatualizados.
-3. **Persistência de Git Limpa**: Finalizar todos os commits com a nomenclatura de *Conventional Commits* em português, garantindo um histórico limpo e profissional.
+O plano focou na consistência das informações e no alinhamento das datas de encontros para a banca examinadora do PIM III:
+1. **Atas Scrum (Reuniões 1 a 10)**: Unificar as atas Scrum registradas na pasta `.planning/meetings/` em todos os repositórios, incluindo os registros de encontros aos domingos.
+2. **Sincronização de Backlog em UML**: Copiar as atas de planejamento e backlog do produto corrigidos para a pasta `01_Documentacao_Teorica/` de UML, removendo os arquivos PDF desatualizados.
+3. **Delimitação de Escopo nos Manuais**: Inserir notas explícitas para a banca examinadora especificando que módulos como simulados ENADE e loja avançada de moedas estão em desenvolvimento para o 4º Semestre.
+4. **Persistência Limpa no Git**: Confirmar as atualizações nos repositórios locais através de commits convencionais em português.
 
 ---
 
@@ -20,43 +18,38 @@ O objetivo foi garantir a uniformidade das informações técnicas, dados de dat
 
 - [x] Atualizar o [ROADMAP.md](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/.planning/ROADMAP.md) no repositório teórico
 - [x] Criar a documentação de fase em [phase_03.md](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/.planning/phases/phase_03.md)
-- [x] Criar as atas Scrum [reuniao_09.md](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/.planning/meetings/reuniao_09.md) (03/05/2026 - Domingo) e [reuniao_10.md](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/.planning/meetings/reuniao_10.md) (24/05/2026 - Domingo)
-- [x] Copiar as atas de reuniões Scrum (`reuniao_01.md` a `reuniao_10.md`) para o repositório prático em `PIM_III-Parte_Pratica/.planning/meetings/`
-- [x] Copiar as atas de reuniões Scrum (`reuniao_01.md` a `reuniao_10.md`) para o repositório UML em `PIM_III-Documentacao_UML/.planning/meetings/`
-- [x] Commitar as alterações e novas atas no repositório `PIM_III-Documentacao_UML` com commit convencional
-- [x] Commitar as novas atas no repositório `PIM_III-Parte_Pratica` com commit convencional
-- [x] Commitar as alterações de roadmap, fase e reuniões no repositório `PIM_III-Parte_Teorica` com commit convencional
-- [x] Verificar o status git de todos os repositórios
+- [x] Criar e ajustar as atas Scrum [reuniao_09.md](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/.planning/meetings/reuniao_09.md) e [reuniao_10.md](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/.planning/meetings/reuniao_10.md)
+- [x] Copiar as atas de reuniões Scrum (1 a 10) para o repositório prático em `PIM_III-Parte_Pratica/.planning/meetings/`
+- [x] Copiar as atas de reuniões Scrum (1 a 10) para o repositório UML em `PIM_III-Documentacao_UML/.planning/meetings/`
+- [x] Commitar as alterações e novas atas no repositório `PIM_III-Documentacao_UML`
+- [x] Commitar as novas atas e manuais no repositório `PIM_III-Parte_Pratica`
+- [x] Commitar as alterações de roadmap, fase e reuniões no repositório `PIM_III-Parte_Teorica`
+- [x] Validar que todos os repositórios estejam com a working tree limpa
 
 ---
 
 ## 🚀 Walkthrough de Desenvolvimento
 
 ### 1. Sincronização Física das Atas Scrum
-As atas informais de reuniões Scrum (da reunião 1 à reunião 10) foram criadas originalmente no repositório teórico para documentar a rotina ágil da equipe. Elas foram replicadas integralmente para:
-- `PIM_III-Parte_Pratica/.planning/meetings/`
-- `PIM_III-Documentacao_UML/.planning/meetings/`
-
-Isso inclui os registros dos encontros de domingo (reuniao_09 e reuniao_10), focados na estruturação de manuais técnicos de extensão universitária e refatoração SOLID de backend.
+Copiamos a pasta `.planning/meetings/` (com os 10 diários de reuniões) do repositório Teórico para os repositórios Prático e UML. Isso inclui as atas de encontros aos domingos (Reuniões 9 e 10), que documentam a escrita de manuais de extensão e a refatoração baseada em SOLID no C#.
 
 ### 2. Sincronização de Backlog e Limpeza em UML
-No repositório de modelagem UML, foram removidos os PDFs estáticos antigos e desatualizados em `01_Documentacao_Teorica/`, que continham datas divergentes de sprints e placeholders. Em substituição, foram sincronizados os markdowns válidos e formatados:
-- `Ata_Sprint_Planning_Nex_TI.md`
-- `Documentacao_Projeto_Nex_TI.md`
-- `Product_Backlog_Nex_TI.md`
+No repositório UML, removemos os PDFs antigos da pasta `01_Documentacao_Teorica/` por conterem dados e datas conflitantes. Em substituição, copiamos os markdowns revisados de backlog do produto, atas de planejamento e documentação do projeto.
 
-### 3. Commits Convencionais
-As atualizações foram salvas e documentadas em cada repositório através de commits convencionais em português:
-- **UML**: `docs(planning): sincroniza atas, backlog e reunioes Scrum com o repositorio teorico e remove PDFs obsoletos`
-- **Prático**: `docs(planning): sincroniza atas de reunioes Scrum com o repositorio teorico`
-- **Teórico**: `docs(planning): sincroniza roadmap, phase 03 e atas Scrum de domingo`
+### 3. Delimitação de Escopo Semestral
+Para evitar que a banca examinadora do PIM III cobre funcionalidades que não pertencem a este semestre, inserimos avisos claros no [README.md](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Pratica/README.md) e no [MANUAL_TECNICO.md](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Pratica/MANUAL_TECNICO.md) do projeto prático. Explicamos que a modelagem relacional de simulados (tabelas e chaves estrangeiras) e as entidades C# foram criadas para manter a conformidade conceitual UML do PIM III, mas que as lógicas funcionais e as telas de simulados estão marcadas como em desenvolvimento, sendo o escopo de entrega do próximo semestre (4º Semestre).
+
+### 4. Commits Convencionais
+Consolidamos as mudanças em cada repositório local através de commits convencionais em português:
+- **UML**: `docs(planning): atualiza ata Scrum 10 com delimitacao de escopo`
+- **Prático**: `docs(planning): atualiza readme, manual tecnico e ata Scrum 10 delimitando escopo semestral`
+- **Teórico**: `docs(planning): atualiza ata Scrum 10 e phase_03 com notas de escopo semestral`
 
 ---
 
 ## 🧪 Validação dos Resultados
 
-- **Uniformidade de Dados**: Verificado que as datas de entrega (`Julho / 2026`), lista de integrantes (Gabriel, Maciel, Maycon, Miguel e Rafael) e estimativas do Product Backlog (US01 a US15 com sequência Fibonacci de Story Points) batem 100% em todas as instâncias do projeto.
-- **Estrutura de Diretórios**: Todas as pastas `.planning/meetings/` contêm os exatos 10 arquivos markdown das reuniões Scrum.
-- **Delimitação de Escopo nos Manuais**: Verificado que a seção "Delimitação de Escopo de Semestre (Banca UNIP)" foi adicionada com sucesso no [README.md](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Pratica/README.md) e no [MANUAL_TECNICO.md](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Pratica/MANUAL_TECNICO.md) do projeto prático, esclarecendo que os módulos de simulados ENADE e loja estão omitidos no front-end por ser escopo do próximo semestre (4º semestre), resguardando a avaliação de MVP atual do 3º semestre.
-- **Git Status Limpo**: Executado o comando `git status` nos três repositórios, confirmando que não há arquivos untracked remanescentes e que as working trees estão totalmente consolidadas.
-
+- **Uniformidade de Dados**: As datas de trabalho nas capas (`Julho / 2026`), lista de integrantes (Gabriel, Maciel, Maycon, Miguel e Rafael) e estimativas de Story Points do Backlog coincidem 100% em todas as instâncias do projeto.
+- **Rastreabilidade de Encontros**: Todas as pastas `.planning/meetings/` contêm os exatos 10 arquivos das reuniões Scrum.
+- **Resguardo de Escopo**: Os manuais práticos e técnicos possuem agora seções formais que delimitam claramente quais recursos pertencem ao MVP do 3º Semestre e quais são escopos futuros do 4º Semestre.
+- **Git Status Limpo**: Executamos `git status` nos três repositórios, confirmando que não existem pendências ou arquivos untracked no ambiente.
