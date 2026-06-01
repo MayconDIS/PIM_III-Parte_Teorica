@@ -1,4 +1,4 @@
-# DOCUMENTAÇÃO DO PROJETO NEX_TI
+﻿# DOCUMENTAÇÃO DO PROJETO NEX_TI
 **Versão:** 2.0 (Alinhamento 2026)
 
 ## 1. Visão do Produto

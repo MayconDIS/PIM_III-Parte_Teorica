@@ -1,4 +1,4 @@
-# PRODUCT BACKLOG – Sistema Nex_TI
+﻿# PRODUCT BACKLOG – Sistema Nex_TI
 **Framework:** Ágil (Scrum) | **Estimativa:** Story Points (Fibonacci)
 
 ---
