@@ -14,12 +14,13 @@ Este documento acompanha a progressão das fases de desenvolvimento e documenta�
 - [x] **Fase 2: Alinhamento com o Manual 2026**
   - Inserção das teorias de BD Relacional e Pilares da POO.
   - Revisão da Etapa 6 (UX) com Persona neutra e iniciante.
-- [x] **Fase 3: Integração de Ativos Visuais (Assets)**
-  - Exportação dos protótipos do Figma (pasta `ATIVIDADES`) para `assets/prototypes/`.
-  - Inserção dos diagramas Astah nas respectivas tags de imagem.
-- [x] **Fase 4: Revisão Final e Polimento**
-  - Verificação final de links e formatação.
-  - Teste de responsividade das imagens inseridas.
+- [x] **Fase 3: Sincronização do Ecossistema Nex_TI**
+  - Cópia e padronização das atas informais de reuniões Scrum (1 a 8) entre os repositórios Teórico, Prático e UML.
+  - Sincronização dos documentos de planejamento e backlogs de produto.
+  - Execução dos commits convencionais nos respectivos repositórios.
+- [x] **Fase 4: Integração de Ativos Visuais e Polimento Final**
+  - Exportação e inserção de protótipos de interface e diagramas Astah no index.html.
+  - Verificação de acessibilidade, links e polimento final de impressão ABNT.
 
 ---
 
