@@ -60,3 +60,4 @@ Substituímos mais de 44 ocorrências de estilos embutidos por classes no [style
 - **Validador de Tags HTML**: Executado script de validação de aninhamento e fechamento de tags HTML, confirmando que a estrutura permaneceu intacta e sem tags órfãs.
 - **Correção dos Erros de ARIA**: A aba de problemas de acessibilidade ARIA foi completamente zerada após a reestruturação do sumário.
 - **Manutenção do Layout ABNT**: A integridade das páginas A4 e a diagramação visual continuam impecáveis no navegador e na visualização de impressão de PDF.
+- **Correção de Transbordo na Impressão**: Ajustada a altura de `.page` sob `@media print` para `height: auto; min-height: 29.7cm;`, resolvendo o problema de imagens cortadas ao permitir que páginas com diagramas empilhados quebrem de forma fluida para a folha seguinte.
