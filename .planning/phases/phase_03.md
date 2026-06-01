@@ -57,4 +57,6 @@ As atualizações foram salvas e documentadas em cada repositório através de c
 
 - **Uniformidade de Dados**: Verificado que as datas de entrega (`Julho / 2026`), lista de integrantes (Gabriel, Maciel, Maycon, Miguel e Rafael) e estimativas do Product Backlog (US01 a US15 com sequência Fibonacci de Story Points) batem 100% em todas as instâncias do projeto.
 - **Estrutura de Diretórios**: Todas as pastas `.planning/meetings/` contêm os exatos 10 arquivos markdown das reuniões Scrum.
+- **Delimitação de Escopo nos Manuais**: Verificado que a seção "Delimitação de Escopo de Semestre (Banca UNIP)" foi adicionada com sucesso no [README.md](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Pratica/README.md) e no [MANUAL_TECNICO.md](file:///C:/Users/mayco/Documents/GitHub/PIM_III-Parte_Pratica/MANUAL_TECNICO.md) do projeto prático, esclarecendo que os módulos de simulados ENADE e loja estão omitidos no front-end por ser escopo do próximo semestre (4º semestre), resguardando a avaliação de MVP atual do 3º semestre.
 - **Git Status Limpo**: Executado o comando `git status` nos três repositórios, confirmando que não há arquivos untracked remanescentes e que as working trees estão totalmente consolidadas.
+
