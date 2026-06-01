@@ -21,17 +21,26 @@ O plano focou na conformidade semântica e de boas práticas recomendadas pelas 
 - [x] Remover `role="menuitem"` nas linhas do sumário no [index.html](file:///c:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/index.html)
 - [x] Substituir estilos inline de margens e largura de tabelas por classes de utilidade no [index.html](file:///c:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/index.html)
 - [x] Substituir alturas de imagem de diagramas/protótipos inline por classes `.img-height-X` no [index.html](file:///c:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/index.html)
-- [x] Validar a redução de warnings e o layout final
+- [x] Adicionar novas classes para remoção de estilos inline remanescentes no [style.css](file:///c:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/style.css)
+- [x] Substituir estilos inline de th (capa e rosto) por classes correspondentes no [index.html](file:///c:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/index.html)
+- [x] Substituir estilos inline de listas (ul) por classes correspondentes no [index.html](file:///c:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/index.html)
+- [x] Substituir estilos inline de legendas (legenda-fonte) por classes correspondentes no [index.html](file:///c:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/index.html)
+- [x] Substituir estilos inline dos h2 (Conclusão e Referências) por classes correspondentes no [index.html](file:///c:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/index.html)
+- [x] Validar a zeragem dos erros no Microsoft Edge Tools e verificar o layout
 
 ---
 
 ## 🚀 Walkthrough de Desenvolvimento
 
 ### 1. Centralização CSS
-Substituímos mais de 30 ocorrências de estilos embutidos por classes no [style.css](file:///c:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/style.css):
+Substituímos mais de 44 ocorrências de estilos embutidos por classes no [style.css](file:///c:/Users/mayco/Documents/GitHub/PIM_III-Parte_Teorica/style.css):
 * **Largura de colunas (`width="X%"`)**: Criadas classes `.col-width-12`, `.col-width-15`, `.col-width-20`, `.col-width-25`, `.col-width-30`, `.col-width-35`, `.col-width-40`, `.col-width-45`, `.col-width-60`, `.col-width-70` e `.col-width-73`.
 * **Dimensões das figuras (`style="max-height: Xcm;"`)**: Criadas classes utilitárias `.img-height-10`, `.img-height-12` e `.img-height-14` para centralizar as dimensões das imagens de diagramas e protótipos de UX/UI.
-* **Margens de espaçamento**: Substituição das margens inline por classes utilitárias como `.mt-1cm`, `.mb-3cm` e `.mb-05cm`, além do aproveitamento das margens padronizadas do contêiner de diagramas.
+* **Margens e Posicionamentos Específicos**:
+  * Criadas classes para as legendas de imagens e códigos `.legenda-fonte-left`, `.mb-0`, `.mb-1cm` para alinhar à esquerda com o recuo correto do ABNT.
+  * Criada classe `.list-caracteristicas` para estilização padronizada de listas de descrição técnica de persona e negócio.
+  * Criadas as classes `.th-left-no-bg` e `.th-no-bg` para cabeçalhos de tabelas de capa e folha de rosto.
+  * Substituição das margens inline por classes utilitárias como `.mt-1cm`, `.mb-3cm`, `.mb-15cm`, `.mb-05cm`, além do aproveitamento das margens padronizadas do contêiner de diagramas.
 
 ### 2. Acessibilidade e Correções W3C
 * **Sumário**: A remoção de `role="menuitem"` de cada linha do sumário eliminou 20 erros estruturais do WAI-ARIA (`axe/aria`), já que a estrutura semântica clássica do HTML5 (`<nav>` e links `<a>`) já garante acessibilidade nativa sem poluir os leitores de tela.
@@ -43,6 +52,7 @@ Substituímos mais de 30 ocorrências de estilos embutidos por classes no [style
 
 ## 🧪 Validação dos Resultados
 
-* **Zero Warnings de Estilo**: Todos os avisos `no-inline-styles` do Edge Tools nas tabelas e diagramas foram eliminados.
+* **Zero Warnings de Estilo**: Todos os 111 avisos (incluindo os últimos 14) de `no-inline-styles` do Edge Tools nas tabelas, listas, h2 e diagramas foram completamente eliminados.
+* **Validador de Tags HTML**: Executado script de validação de aninhamento e fechamento de tags HTML, confirmando que a estrutura permaneceu intacta e sem tags órfãs.
 * **Correção dos Erros de ARIA**: A aba de problemas de acessibilidade ARIA foi completamente zerada após a reestruturação do sumário.
 * **Manutenção do Layout ABNT**: A integridade das páginas A4 e a diagramação visual continuam impecáveis no navegador e na visualização de impressão de PDF.

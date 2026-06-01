@@ -170,3 +170,37 @@ td { padding: 10px; text-align: left; vertical-align: middle; }
 .my-05cm { margin-top: 0.5cm; margin-bottom: 0.5cm; }
 .mt-1cm-mb-1cm { margin-top: 1cm; margin-bottom: 1cm; }
 .mb-05cm { margin-bottom: 0.5cm; }
+
+/* Classes específicas para remover estilos inline */
+.th-left-no-bg {
+    text-align: left;
+    background: none;
+}
+
+.th-no-bg {
+    background: none;
+}
+
+.list-caracteristicas {
+    margin-left: 1cm;
+    margin-bottom: 0.5cm;
+    font-size: 11pt;
+}
+
+.legenda-fonte-left {
+    text-align: left;
+    margin-top: -0.5cm;
+}
+
+/* Utilitários adicionais de margem */
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-1cm {
+    margin-bottom: 1cm;
+}
+
+.mb-15cm {
+    margin-bottom: 1.5cm;
+}

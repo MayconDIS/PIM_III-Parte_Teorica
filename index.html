@@ -23,7 +23,7 @@
         </header>
         
         <table class="table-capa mt-1cm mb-3cm" aria-label="Tabela de Autores">
-            <tr><th class="col-width-70" style="text-align: left; background: none;">Nomes</th><th class="col-width-30" style="text-align: left; background: none;">R.A</th></tr>
+            <tr><th class="col-width-70 th-left-no-bg">Nomes</th><th class="col-width-30 th-left-no-bg">R.A</th></tr>
             <tr><td>Gabriel Alves Moreira</td><td>H67HJI4</td></tr>
             <tr><td>Maciel Costa da Silva</td><td>R280985</td></tr>
             <tr><td>Maycon Douglas Inácio Silva</td><td>H719CD3</td></tr>
@@ -35,7 +35,7 @@
 
     <section class="page" aria-label="Folha de Rosto">
         <table class="table-autores mt-1cm mb-3cm">
-            <tr><th class="col-width-70" style="background:none;">Nomes</th><th class="col-width-30" style="background:none;">R.A</th></tr>
+            <tr><th class="col-width-70 th-no-bg">Nomes</th><th class="col-width-30 th-no-bg">R.A</th></tr>
             <tr><td>Gabriel Alves Moreira</td><td>H67HJI4</td></tr>
             <tr><td>Maciel Costa da Silva</td><td>R280985</td></tr>
             <tr><td>Maycon Douglas Inácio Silva</td><td>H719CD3</td></tr>
@@ -113,7 +113,7 @@
         <h2 id="sec-2">2 DESENVOLVIMENTO</h2>
         <h3 id="sec-2-1">2.1 Etapa 1 – Definição e caracterização do negócio fictício</h3>
         <p class="paragrafo">Para estabelecer o contexto organizacional exigido no projeto, a Nex_TI foi concebida como uma startup de tecnologia educacional (EdTech). Suas características principais foram consolidadas para atender aos requisitos de mercado e solucionar lacunas de aprendizagem.</p>
-        <ul style="margin-left: 1cm; margin-bottom: 0.5cm; font-size: 11pt;">
+        <ul class="list-caracteristicas">
             <li><strong>Denominação da Empresa:</strong> Nex_TI Educacional.</li>
             <li><strong>Segmento de Atuação:</strong> Tecnologia Educacional (EdTech) / Software as a Service (SaaS).</li>
             <li><strong>Público-Alvo:</strong> Instituições de ensino (B2B) e estudantes/profissionais (B2C) que necessitam de ferramentas de memorização e nivelamento.</li>
@@ -307,7 +307,7 @@ CREATE TABLE tb_provas (
     ano INT NOT NULL, tipo VARCHAR(50) NOT NULL
 );</code></pre>
         </div>
-        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 0;">Fonte: Autores, 2026.</p>
+        <p class="legenda-fonte legenda-fonte-left mb-0">Fonte: Autores, 2026.</p>
     </section>
 
     <section class="page" aria-label="DDL 2">
@@ -352,7 +352,7 @@ CREATE TABLE tb_prova_questao (
     CONSTRAINT FK_PQ_Q FOREIGN KEY (id_questao) REFERENCES tb_questoes(id_questao)
 );</code></pre>
         </div>
-        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 1cm;">Fonte: Autores, 2026.</p>
+        <p class="legenda-fonte legenda-fonte-left mb-1cm">Fonte: Autores, 2026.</p>
     </section>
 
     <section class="page" aria-label="POO Parte 1">
@@ -381,7 +381,7 @@ namespace PIM_III {
     }
 }</code></pre>
         </div>
-        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 1cm;">Fonte: Autores, 2026.</p>
+        <p class="legenda-fonte legenda-fonte-left mb-1cm">Fonte: Autores, 2026.</p>
     </section>
 
     <section class="page" aria-label="POO Parte 2">
@@ -410,7 +410,7 @@ namespace PIM_III {
     }
 }</code></pre>
         </div>
-        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 1cm;">Fonte: Autores, 2026.</p>
+        <p class="legenda-fonte legenda-fonte-left mb-1cm">Fonte: Autores, 2026.</p>
     </section>
 
     <section class="page" aria-label="POO Parte 3">
@@ -436,7 +436,7 @@ public class Program {
     }
 }</code></pre>
         </div>
-        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 1cm;">Fonte: Autores, 2026.</p>
+        <p class="legenda-fonte legenda-fonte-left mb-1cm">Fonte: Autores, 2026.</p>
     </section>
 
     <section class="page" aria-label="Web Responsivo">
@@ -463,14 +463,14 @@ public class Program {
                 <td>Transição adaptativa do layout para suporte a tablets e dispositivos menores sem bibliotecas externas.</td>
             </tr>
         </table>
-        <p class="legenda-fonte" style="text-align: left; margin-top:-0.5cm; margin-bottom: 0;">Fonte: Autores, 2026.</p>
+        <p class="legenda-fonte legenda-fonte-left mb-0">Fonte: Autores, 2026.</p>
     </section>
 
     <section class="page" aria-label="UX UI 1">
         <span class="num-pagina">19</span>
         <h3 id="sec-2-6">2.6 Etapa 6 – UX e UI Design</h3>
         <p class="paragrafo">Para guiar as decisões de usabilidade e arquitetura de informação, foi modelada a <strong>Persona</strong> principal do sistema, refletindo com exatidão o público-alvo da plataforma:</p>
-        <ul style="margin-left: 1cm; margin-bottom: 0.5cm; font-size: 11pt;">
+        <ul class="list-caracteristicas">
             <li><strong>Persona Principal:</strong> Jovem de 18 a 20 anos, com o ensino médio recém-concluído.</li>
             <li><strong>Perfil e Dores:</strong> Possui grande interesse em ingressar na área de tecnologia, mas enfrenta insegurança diante da enorme quantidade de jargões técnicos e da complexidade inicial das disciplinas abordadas nos cursos superiores de TI.</li>
             <li><strong>A Jornada na Nex_TI:</strong> Utiliza a plataforma como ferramenta de nivelamento. Através de flashcards de nível introdutório e repetição espaçada, familiariza-se gradativamente com os fundamentos da área. A gamificação (XP e moedas) reduz a frustração comum no aprendizado inicial, mantendo o engajamento diário.</li>
@@ -594,7 +594,7 @@ public class Program {
 
     <section class="page" aria-label="Conclusao">
         <span class="num-pagina">25</span>
-        <h2 id="sec-3" style="margin-top: 1cm;">3 CONCLUSÃO</h2>
+        <h2 id="sec-3" class="mt-1cm">3 CONCLUSÃO</h2>
         <p class="paragrafo">A concepção arquitetural e a estruturação de requisitos da plataforma Nex_TI comprovaram que a integração da gamificação com métodos de repetição espaçada viabiliza soluções tecnológicas educacionais de alto impacto. A aderência estrita ao Scrum e Kanban resultou em um fluxo rastreável, capaz de projetar o software desde a ideação do banco de dados relacional até a consolidação em C# orientado a objetos.</p>
         <p class="paragrafo">As interfaces responsivas, regidas pelos preceitos de CSS Grid, garantem desempenho e adequam-se de forma eficiente aos navegadores modernos. Somado a isso, o atendimento rigoroso à estruturação via WAI-ARIA demonstra a maturidade técnica da equipe na criação de um produto efetivamente acessível.</p>
         <p class="paragrafo">O escopo do projeto validou plenamente as bases do MVP, entregando um sistema documentado, modelado semântica e sistemicamente para suportar as complexidades de transação, escalabilidade e conformidade legal exigidas pelo atual ecossistema corporativo de tecnologia.</p>
@@ -602,7 +602,7 @@ public class Program {
 
     <section class="page" aria-label="Referencias">
         <span class="num-pagina">26</span>
-        <h2 id="sec-ref" class="center" style="margin-bottom: 1.5cm;">REFERÊNCIAS</h2>
+        <h2 id="sec-ref" class="center mb-15cm">REFERÊNCIAS</h2>
         <p>ANKI. <strong>Powerful, intelligent flashcards</strong>. Disponível em: <a href="https://apps.ankiweb.net/" target="_blank" rel="noopener" class="ref-link">https://apps.ankiweb.net/</a>. Acesso em: 22 mar. 2026.</p>
         <br>
         <p>BRASIL. <strong>Lei nº 13.709, de 14 de agosto de 2018. Lei Geral de Proteção de Dados Pessoais (LGPD)</strong>. Diário Oficial da União, Brasília, DF, 15 ago. 2018.</p>
