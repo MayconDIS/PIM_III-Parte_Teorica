@@ -64,7 +64,8 @@ td { padding: 10px; text-align: left; vertical-align: middle; }
 .ref-link:hover { color: #2f81f7; }
 
 .diagrama-container { text-align: center; margin: 1cm 0; page-break-inside: avoid; break-inside: avoid; }
-.diagrama-img { max-width: 100%; max-height: 18cm; object-fit: contain; margin-bottom: 0.2cm; }
+.diagrama-img { max-width: 100%; max-height: 18cm; object-fit: contain; margin-bottom: 0.2cm; cursor: zoom-in; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.diagrama-img:hover { transform: translateY(-2px); }
 .legenda-topo { font-size: 10pt; font-weight: bold; text-align: center; margin-bottom: 0.2cm; }
 .legenda-fonte { font-size: 10pt; text-align: center; }
 
@@ -146,6 +147,100 @@ td { padding: 10px; text-align: left; vertical-align: middle; }
     .tab-content .diagrama-img {
         max-height: 4.5cm !important;
     }
+    .lightbox, #image-lightbox {
+        display: none !important;
+    }
+    /* Evita quebras no meio de tabelas, caixas de código e diagramas */
+    table, tr, td, th, .code-box, .diagrama-container {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+}
+
+/* Modal Lightbox */
+.lightbox {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.lightbox.active .lightbox-content img {
+    transform: scale(1);
+}
+
+.lightbox-caption {
+    color: #fff;
+    font-size: 11pt;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    margin-top: 5px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 40px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+    z-index: 1010;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.lightbox-close:hover {
+    color: #fff;
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Utilitários de Largura para Tabelas e Elementos */
