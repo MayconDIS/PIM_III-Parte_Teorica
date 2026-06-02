@@ -195,20 +195,19 @@ body {
 
 .link-icon {
     font-size: 0.85rem;
-    color: #ffffff !important; /* Em branco para facilitar a leitura */
+    color: var(--text-muted);
 }
 
 .brand-link-url {
-    color: #ffffff !important; /* Em branco para facilitar a leitura */
+    color: var(--text-muted);
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 500;
-    transition: opacity 0.2s ease;
 }
 
 .brand-link-url:hover {
     text-decoration: underline;
-    opacity: 0.8;
+    color: #ffffff;
 }
 
 /* Row Layout */
@@ -240,13 +239,6 @@ body {
     max-width: 100%;
     max-height: 80px;
     object-fit: contain;
-    border-radius: 8px;
-}
-
-.logo-svg {
-    width: 100%;
-    height: 100%;
-    max-height: 80px;
     border-radius: 8px;
 }
 
@@ -371,85 +363,12 @@ body {
     line-height: 1.55;
 }
 
-/* ABA 2: BUSINESS DETAILS */
-.details-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem;
-}
-
-.col-span-2-detail {
-    grid-column: span 2;
-}
-
-.detail-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.6rem 1.8rem;
-    min-height: 80px;
-}
-
-.detail-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.detail-title {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--text-main);
-}
-
-.title-with-info {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.info-icon {
+/* Project Footer */
+.project-footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    color: var(--text-dark);
     font-size: 0.78rem;
-    color: var(--text-muted);
-    cursor: help;
-}
-
-/* Social Card Icons */
-.social-icons-preview {
-    display: flex;
-    gap: 0.6rem;
-    margin-top: 0.4rem;
-}
-
-.social-icon {
-    font-size: 0.92rem;
-    color: var(--text-muted);
-}
-
-/* Botões de Edição (Lápis) */
-.edit-btn {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: var(--accent-olive-bg);
-    border: none;
-    outline: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.15s ease;
-}
-
-.edit-btn:hover {
-    background-color: #3b3f27;
-    transform: scale(1.05);
-}
-
-.pen-icon {
-    font-size: 0.72rem;
-    color: var(--accent-olive-text);
 }
 
 /* Animações */
@@ -463,42 +382,8 @@ body {
     .card-row {
         grid-template-columns: 1fr;
     }
-    .details-grid {
-        grid-template-columns: 1fr;
-    }
-    .col-span-2-detail {
-        grid-column: span 1;
-    }
     .colors-list {
         flex-wrap: wrap;
         gap: 1.5rem;
     }
 }
-
-/* Links de Referência nos Cards */
-.card-link-ref {
-    color: #ffffff !important; /* Em branco para facilitar a leitura */
-    font-size: 0.72rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    opacity: 0.6;
-    transition: opacity 0.2s ease;
-}
-
-.card-link-ref:hover {
-    opacity: 0.9;
-    text-decoration: underline;
-}
-
-.font-preview-item-link {
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.2s ease;
-}
-
-.font-preview-item-link:hover {
-    transform: translateY(-2px);
-}
-

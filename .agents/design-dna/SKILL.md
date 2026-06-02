@@ -46,7 +46,7 @@ Before writing the HTML, analyze the target project's design system or palette (
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Project - Design_DNA</title>
+    <title>Your Project DNA — Design_DNA</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,10 +82,12 @@ Before writing the HTML, analyze the target project's design system or palette (
                     <!-- Brand Header Card -->
                     <div class="dna-card brand-header-card">
                         <h2 class="brand-title">Design_DNA</h2>
-                        <div class="brand-url-container">
-                            <i class="fa-solid fa-link link-icon"></i>
-                            <!-- ADAPTAR: Substituir pelo link do repositório Git do projeto correspondente -->
-                            <a href="https://github.com/YourUsername/YourRepository" target="_blank" class="brand-link-url">https://github.com/YourUsername/YourRepository</a>
+                        <div class="brand-url-group" style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                            <div class="brand-url-container" style="display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fa-brands fa-github link-icon"></i>
+                                <!-- ADAPTAR: Substituir pelo link do repositório Git do projeto correspondente -->
+                                <a href="https://github.com/YourUsername/YourRepository" target="_blank" class="brand-link-url">https://github.com/YourUsername/YourRepository</a>
+                            </div>
                         </div>
                     </div>
 
@@ -93,66 +95,55 @@ Before writing the HTML, analyze the target project's design system or palette (
                     <div class="card-row">
                         <!-- Logo Card (SVG Geometria Neon embutido) -->
                         <div class="dna-card logo-card">
-                            <a href="https://github.com/YourUsername/YourRepository/tree/main/design_DNA" target="_blank" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-decoration: none;">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" class="logo-svg" style="width: 100%; height: 100%; max-height: 80px;">
-                                    <defs>
-                                        <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
-                                            <feGaussianBlur stdDeviation="6" result="blur" />
-                                            <feMerge>
-                                                <feMergeNode in="blur" />
-                                                <feMergeNode in="SourceGraphic" />
-                                            </feMerge>
-                                        </filter>
-                                        <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
-                                            <feGaussianBlur stdDeviation="8" result="blur" />
-                                            <feMerge>
-                                                <feMergeNode in="blur" />
-                                                <feMergeNode in="SourceGraphic" />
-                                            </feMerge>
-                                        </filter>
-                                    </defs>
-                                    <rect x="30" y="20" width="120" height="80" rx="8" fill="#18181c" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" />
-                                    <rect x="90" y="35" width="160" height="60" rx="10" fill="#a855f7" opacity="0.85" filter="url(#glow-purple)" />
-                                    <rect x="210" y="25" width="140" height="70" rx="12" fill="#00e6e6" opacity="0.9" filter="url(#glow-cyan)" />
-                                    <rect x="150" y="45" width="100" height="40" rx="6" fill="#353822" stroke="#a8b865" stroke-width="1.5" />
-                                    <text x="200" y="70" font-family="'Lora', serif" font-size="14" fill="#a8b865" font-weight="bold" text-anchor="middle" letter-spacing="1">DNA</text>
-                                </svg>
-                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" class="logo-svg" style="width: 100%; height: 100%; max-height: 80px;">
+                                <defs>
+                                    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="6" result="blur" />
+                                        <feMerge>
+                                            <feMergeNode in="blur" />
+                                            <feMergeNode in="SourceGraphic" />
+                                        </feMerge>
+                                    </filter>
+                                    <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="8" result="blur" />
+                                        <feMerge>
+                                            <feMergeNode in="blur" />
+                                            <feMergeNode in="SourceGraphic" />
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+                                <rect x="30" y="20" width="120" height="80" rx="8" fill="#18181c" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" />
+                                <rect x="90" y="35" width="160" height="60" rx="10" fill="#a855f7" opacity="0.85" filter="url(#glow-purple)" />
+                                <rect x="210" y="25" width="140" height="70" rx="12" fill="#00e6e6" opacity="0.9" filter="url(#glow-cyan)" />
+                                <rect x="150" y="45" width="100" height="40" rx="6" fill="#353822" stroke="#a8b865" stroke-width="1.5" />
+                                <text x="200" y="70" font-family="'Lora', serif" font-size="14" fill="#a8b865" font-weight="bold" text-anchor="middle" letter-spacing="1">DNA</text>
+                            </svg>
                         </div>
 
                         <!-- Fonts Card -->
                         <div class="dna-card fonts-card">
                             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
                                 <h3 class="card-label">Fonts</h3>
-                                <a href="https://fonts.google.com/" target="_blank" class="card-link-ref">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Google Fonts
+                                <a href="https://fonts.google.com/" target="_blank" style="color: var(--link-cyan); font-size: 0.75rem; text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">
+                                    <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i> Google Fonts
                                 </a>
                             </div>
                             <div class="fonts-preview-container">
-                                <a href="https://fonts.google.com/specimen/JetBrains+Mono" target="_blank" class="font-preview-item-link">
-                                    <div class="font-preview-item">
-                                        <span class="font-huge-char font-fira">Aa</span>
-                                        <span class="font-name-sub">JetBrains Mono <i class="fa-solid fa-link" style="font-size: 0.6rem; opacity: 0.6;"></i></span>
-                                    </div>
-                                </a>
-                                <a href="https://fonts.google.com/specimen/Inter" target="_blank" class="font-preview-item-link">
-                                    <div class="font-preview-item">
-                                        <span class="font-huge-char font-inter">Aa</span>
-                                        <span class="font-name-sub">Inter <i class="fa-solid fa-link" style="font-size: 0.6rem; opacity: 0.6;"></i></span>
-                                    </div>
-                                </a>
+                                <div class="font-preview-item">
+                                    <span class="font-huge-char font-fira">Aa</span>
+                                    <span class="font-name-sub">JetBrains Mono</span>
+                                </div>
+                                <div class="font-preview-item">
+                                    <span class="font-huge-char font-inter">Aa</span>
+                                    <span class="font-name-sub">Inter</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Row 3: Colors -->
                     <div class="dna-card colors-card">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
-                            <h3 class="card-label">Colors</h3>
-                            <a href="https://coolors.co/" target="_blank" class="card-link-ref">
-                                <i class="fa-solid fa-palette"></i> Coolors Palette
-                            </a>
-                        </div>
+                        <h3 class="card-label">Colors</h3>
                         <div class="colors-list">
                             <div class="color-item">
                                 <div class="color-circle" style="background-color: #0c0d12;"></div>
@@ -177,21 +168,13 @@ Before writing the HTML, analyze the target project's design system or palette (
                     <div class="card-row">
                         <!-- Tagline -->
                         <div class="dna-card tagline-card">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
-                                <h3 class="card-label">Tagline</h3>
-                                <i class="fa-solid fa-quote-right" style="color: var(--text-dark); font-size: 0.8rem;"></i>
-                            </div>
+                            <h3 class="card-label">Tagline</h3>
                             <p class="tagline-text">High fidelity and immersive.</p>
                         </div>
 
                         <!-- Brand Values -->
                         <div class="dna-card values-card">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
-                                <h3 class="card-label">Brand values</h3>
-                                <a href="diretrizes.md" class="card-link-ref">
-                                    <i class="fa-solid fa-book"></i> Guidelines
-                                </a>
-                            </div>
+                            <h3 class="card-label">Brand values</h3>
                             <div class="badge-container">
                                 <span class="outline-badge">High Fidelity</span>
                                 <span class="outline-badge">Refined Minimalism</span>
@@ -204,12 +187,7 @@ Before writing the HTML, analyze the target project's design system or palette (
                     <div class="card-row">
                         <!-- Brand Aesthetic -->
                         <div class="dna-card aesthetic-card">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
-                                <h3 class="card-label">Brand aesthetic</h3>
-                                <a href="paleta.json" target="_blank" class="card-link-ref">
-                                    <i class="fa-solid fa-code"></i> JSON Tokens
-                                </a>
-                            </div>
+                            <h3 class="card-label">Brand aesthetic</h3>
                             <div class="badge-container">
                                 <span class="outline-badge">minimalist</span>
                                 <span class="outline-badge">refined</span>
@@ -221,12 +199,7 @@ Before writing the HTML, analyze the target project's design system or palette (
 
                         <!-- Brand Tone of Voice -->
                         <div class="dna-card tone-card">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
-                                <h3 class="card-label">Brand tone of voice</h3>
-                                <a href="https://marketingplatform.google.com/" target="_blank" class="card-link-ref">
-                                    <i class="fa-solid fa-bullhorn"></i> Marketing
-                                </a>
-                            </div>
+                            <h3 class="card-label">Brand tone of voice</h3>
                             <div class="badge-container">
                                 <span class="outline-badge">Premium</span>
                                 <span class="outline-badge">Technical</span>
@@ -237,12 +210,7 @@ Before writing the HTML, analyze the target project's design system or palette (
 
                     <!-- Row 6: Business Overview -->
                     <div class="dna-card overview-card">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
-                            <h3 class="card-label">Business overview</h3>
-                            <a href="../README.md" class="card-link-ref">
-                                <i class="fa-solid fa-file-lines"></i> Readme
-                            </a>
-                        </div>
+                        <h3 class="card-label">Business overview</h3>
                         <p class="overview-text">Este design system define as diretrizes visuais, de layout e de estilo para o desenvolvimento de interfaces e apresentações baseadas no Design_DNA. A identidade visual busca criar uma experiência de alta fidelidade, moderna, refinada e imersiva, utilizando glows de iluminação radial difusa e composições espaciais estilizadas.</p>
                     </div>
                 </div>
@@ -251,7 +219,7 @@ Before writing the HTML, analyze the target project's design system or palette (
 
         <!-- Rodapé do Projeto -->
         <footer class="project-footer">
-            <p>Layout e diretrizes desenvolvidos a partir das imagens de referência fornecidas pelo usuário em assets/.</p>
+            <p>Layout e diretrizes desenvolvidos a partir de referências do design_DNA.</p>
         </footer>
     </div>
 </body>
@@ -409,9 +377,12 @@ Create the file `design_DNA/paleta.json` with the exact system color variables:
 }
 ```
 
-### 5. Save the CSS Foundations (`design_DNA/s```css
+### 5. Save the CSS Foundations (`design_DNA/style.css`)
+Create the file `design_DNA/style.css` containing the complete CSS layout code, including the neon glows animations:
+
+```css
 /* ==========================================================================
-   Your Project DNA — Estilo Fiel às Imagens Modelo
+   Design_DNA — Estilo Fiel às Imagens Modelo
    ========================================================================== */
 
 :root {
@@ -421,11 +392,15 @@ Create the file `design_DNA/paleta.json` with the exact system color variables:
     --border-color: rgba(255, 255, 255, 0.05);
     
     /* Cores Específicas do Modelo */
-    --accent-olive-bg: #353822; /* Fundo do add a logo e botões de lápis */
-    --accent-olive-text: #a8b865; /* Texto amarelo-oliva */
-    --accent-gold: #c9b177; /* Cor dourada/amarela das abas */
+    --accent-olive-bg: #353822;
+    --accent-olive-text: #a8b865;
+    --accent-gold: #c9b177;
     --accent-gold-dim: rgba(201, 177, 119, 0.6);
-    --link-cyan: #00e6e6; /* Cor do link e do círculo ciano */
+    --link-cyan: #00e6e6;
+    
+    /* Glows */
+    --glow-purple: rgba(168, 85, 247, 0.15);
+    --glow-cyan: rgba(0, 230, 230, 0.11);
     
     /* Tipografia */
     --font-serif: 'Lora', serif;
@@ -473,14 +448,14 @@ body {
 .glow-left {
     top: -25vh;
     left: -20vw;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    background: radial-gradient(circle, var(--glow-purple) 0%, rgba(0, 0, 0, 0) 70%);
     animation: floatGlowLeft 22s infinite alternate ease-in-out;
 }
 
 .glow-right {
     bottom: -25vh;
     right: -20vw;
-    background: radial-gradient(circle, rgba(0, 230, 230, 0.11) 0%, rgba(0, 0, 0, 0) 70%);
+    background: radial-gradient(circle, var(--glow-cyan) 0%, rgba(0, 0, 0, 0) 70%);
     animation: floatGlowRight 22s infinite alternate ease-in-out;
 }
 
@@ -553,8 +528,6 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 16px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
 }
 
 /* Painel de Conteúdo */
@@ -570,6 +543,11 @@ body {
     animation: fadeIn 0.4s ease-out forwards;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* Cards do DNA */
 .dna-card {
     background-color: var(--card-bg);
@@ -582,47 +560,6 @@ body {
     transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-.dna-card:hover {
-    border-color: rgba(255, 255, 255, 0.08);
-}
-
-/* Nex_TI Header Card */
-.brand-header-card {
-    gap: 0.5rem;
-}
-
-.brand-title {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #ffffff;
-    letter-spacing: -0.2px;
-}
-
-.brand-url-container {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    color: var(--text-muted);
-}
-
-.link-icon {
-    font-size: 0.85rem;
-    color: #ffffff !important; /* Em branco para facilitar a leitura */
-}
-
-.brand-link-url {
-    color: #ffffff !important; /* Em branco para facilitar a leitura */
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    transition: opacity 0.2s ease;
-}
-
-.brand-link-url:hover {
-    text-decoration: underline;
-    opacity: 0.8;
-}
-
 /* Row Layout */
 .card-row {
     display: grid;
@@ -630,7 +567,7 @@ body {
     gap: 1.2rem;
 }
 
-/* Add Logo Card */
+/* Logo Card */
 .logo-card {
     background-color: var(--card-bg);
     border-color: var(--border-color);
@@ -646,13 +583,6 @@ body {
 
 .logo-card:hover {
     opacity: 0.9;
-}
-
-.logo-image {
-    max-width: 100%;
-    max-height: 80px;
-    object-fit: contain;
-    border-radius: 8px;
 }
 
 .logo-svg {
@@ -713,207 +643,83 @@ body {
 
 .colors-list {
     display: flex;
-    gap: 3rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .color-item {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 0.6rem;
 }
 
 .color-circle {
-    width: 48px;
-    height: 48px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border-color);
 }
 
 .color-hex-text {
-    font-family: var(--font-sans);
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    font-weight: 500;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--text-main);
 }
 
 /* Tagline Card */
 .tagline-card {
-    justify-content: center;
-    gap: 0.6rem;
+    gap: 0.8rem;
 }
 
 .tagline-text {
     font-family: var(--font-serif);
+    font-size: 1.4rem;
     font-style: italic;
-    font-size: 1.3rem;
-    color: var(--accent-olive-text);
-    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.3;
 }
 
-/* Values, Aesthetic & Tone Cards (Badges) */
-.values-card, .aesthetic-card, .tone-card {
-    gap: 1rem;
+/* Values Card */
+.values-card {
+    gap: 0.8rem;
 }
 
 .badge-container {
     display: flex;
-    flex-wrap: wrap;
     gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 0.2rem;
 }
 
 .outline-badge {
-    font-size: 0.78rem;
-    color: var(--text-main);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 6px;
-    padding: 0.35rem 0.7rem;
-    font-weight: 500;
+    border: 1px solid var(--border-color);
+    padding: 0.35rem 0.75rem;
+    border-radius: 99px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted);
     background-color: rgba(255, 255, 255, 0.01);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-/* Business Overview Card */
+/* Aesthetic Card & Tone Card */
+.aesthetic-card, .tone-card {
+    gap: 0.8rem;
+}
+
+/* Overview Card */
 .overview-card {
     gap: 0.8rem;
 }
 
 .overview-text {
     font-size: 0.88rem;
-    color: var(--text-main);
-    line-height: 1.55;
-}
-
-/* ABA 2: BUSINESS DETAILS */
-.details-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem;
-}
-
-.col-span-2-detail {
-    grid-column: span 2;
-}
-
-.detail-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.6rem 1.8rem;
-    min-height: 80px;
-}
-
-.detail-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.detail-title {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--text-main);
-}
-
-.title-with-info {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.info-icon {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    cursor: help;
-}
-
-/* Social Card Icons */
-.social-icons-preview {
-    display: flex;
-    gap: 0.6rem;
-    margin-top: 0.4rem;
-}
-
-.social-icon {
-    font-size: 0.92rem;
+    line-height: 1.6;
     color: var(--text-muted);
 }
 
-/* Botões de Edição (Lápis) */
-.edit-btn {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: var(--accent-olive-bg);
-    border: none;
-    outline: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.15s ease;
-}
-
-.edit-btn:hover {
-    background-color: #3b3f27;
-    transform: scale(1.05);
-}
-
-.pen-icon {
-    font-size: 0.72rem;
-    color: var(--accent-olive-text);
-}
-
-/* Animações */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .card-row {
-        grid-template-columns: 1fr;
-    }
-    .details-grid {
-        grid-template-columns: 1fr;
-    }
-    .col-span-2-detail {
-        grid-column: span 1;
-    }
-    .colors-list {
-        flex-wrap: wrap;
-        gap: 1.5rem;
-    }
-}
-
-/* Links de Referência nos Cards */
-.card-link-ref {
-    color: #ffffff !important; /* Em branco para facilitar a leitura */
-    font-size: 0.72rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    opacity: 0.6;
-    transition: opacity 0.2s ease;
-}
-
-.card-link-ref:hover {
-    opacity: 0.9;
-    text-decoration: underline;
-}
-
-.font-preview-item-link {
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.2s ease;
-}
-
-.font-preview-item-link:hover {
-    transform: translateY(-2px);
-}
-``````t Footer */
+/* Project Footer */
 .project-footer {
     text-align: center;
     padding: 1.5rem 0;
