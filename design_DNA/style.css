@@ -269,7 +269,7 @@ body {
 .font-huge-char {
     font-size: 1.8rem;
     font-weight: 500;
-    color: var(--accent-olive-text);
+    color: var(--link-cyan);
 }
 
 .font-fira {
@@ -327,7 +327,7 @@ body {
     font-family: var(--font-serif);
     font-style: italic;
     font-size: 1.3rem;
-    color: var(--accent-olive-text);
+    color: var(--link-cyan);
     font-weight: 500;
 }
 
