@@ -1,23 +1,19 @@
 /* ==========================================================================
-   Design_DNA — Estilo Fiel às Imagens Modelo
+   Your Project DNA — Estilo Fiel às Imagens Modelo
    ========================================================================== */
 
 :root {
-    --bg-color: #0b0c10;
+    --bg-color: #0c0c0e;
     --card-bg: #1e1e24;
     --card-bg-header: #18181c;
     --border-color: rgba(255, 255, 255, 0.05);
     
     /* Cores Específicas do Modelo */
-    --accent-olive-bg: #353822;
-    --accent-olive-text: #a8b865;
-    --accent-gold: #c9b177;
+    --accent-olive-bg: #353822; /* Fundo do add a logo e botões de lápis */
+    --accent-olive-text: #a8b865; /* Texto amarelo-oliva */
+    --accent-gold: #c9b177; /* Cor dourada/amarela das abas */
     --accent-gold-dim: rgba(201, 177, 119, 0.6);
-    --link-cyan: #00e6e6;
-    
-    /* Glows */
-    --glow-purple: rgba(168, 85, 247, 0.15);
-    --glow-cyan: rgba(0, 230, 230, 0.11);
+    --link-cyan: #00e6e6; /* Cor do link e do círculo ciano */
     
     /* Tipografia */
     --font-serif: 'Lora', serif;
@@ -65,14 +61,14 @@ body {
 .glow-left {
     top: -25vh;
     left: -20vw;
-    background: radial-gradient(circle, var(--glow-purple) 0%, rgba(0, 0, 0, 0) 70%);
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
     animation: floatGlowLeft 22s infinite alternate ease-in-out;
 }
 
 .glow-right {
     bottom: -25vh;
     right: -20vw;
-    background: radial-gradient(circle, var(--glow-cyan) 0%, rgba(0, 0, 0, 0) 70%);
+    background: radial-gradient(circle, rgba(0, 230, 230, 0.11) 0%, rgba(0, 0, 0, 0) 70%);
     animation: floatGlowRight 22s infinite alternate ease-in-out;
 }
 
@@ -145,6 +141,8 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 16px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Painel de Conteúdo */
@@ -160,11 +158,6 @@ body {
     animation: fadeIn 0.4s ease-out forwards;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 /* Cards do DNA */
 .dna-card {
     background-color: var(--card-bg);
@@ -177,6 +170,47 @@ body {
     transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
+.dna-card:hover {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Nex_TI Header Card */
+.brand-header-card {
+    gap: 0.5rem;
+}
+
+.brand-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: -0.2px;
+}
+
+.brand-url-container {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text-muted);
+}
+
+.link-icon {
+    font-size: 0.85rem;
+    color: #ffffff !important; /* Em branco para facilitar a leitura */
+}
+
+.brand-link-url {
+    color: #ffffff !important; /* Em branco para facilitar a leitura */
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.brand-link-url:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
 /* Row Layout */
 .card-row {
     display: grid;
@@ -184,7 +218,7 @@ body {
     gap: 1.2rem;
 }
 
-/* Logo Card */
+/* Add Logo Card */
 .logo-card {
     background-color: var(--card-bg);
     border-color: var(--border-color);
@@ -200,6 +234,13 @@ body {
 
 .logo-card:hover {
     opacity: 0.9;
+}
+
+.logo-image {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 .logo-svg {
@@ -260,103 +301,176 @@ body {
 
 .colors-list {
     display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+    gap: 3rem;
 }
 
 .color-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 0.6rem;
 }
 
 .color-circle {
-    width: 20px;
-    height: 20px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .color-hex-text {
-    font-family: var(--font-mono);
-    font-size: 0.82rem;
-    color: var(--text-main);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
 }
 
 /* Tagline Card */
 .tagline-card {
-    gap: 0.8rem;
+    justify-content: center;
+    gap: 0.6rem;
 }
 
 .tagline-text {
     font-family: var(--font-serif);
-    font-size: 1.4rem;
     font-style: italic;
-    color: #ffffff;
-    line-height: 1.3;
+    font-size: 1.3rem;
+    color: var(--accent-olive-text);
+    font-weight: 500;
 }
 
-/* Values Card */
-.values-card {
-    gap: 0.8rem;
+/* Values, Aesthetic & Tone Cards (Badges) */
+.values-card, .aesthetic-card, .tone-card {
+    gap: 1rem;
 }
 
 .badge-container {
     display: flex;
-    gap: 0.6rem;
     flex-wrap: wrap;
-    margin-top: 0.2rem;
+    gap: 0.6rem;
 }
 
 .outline-badge {
-    border: 1px solid var(--border-color);
-    padding: 0.35rem 0.75rem;
-    border-radius: 99px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    color: var(--text-muted);
+    font-size: 0.78rem;
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 0.35rem 0.7rem;
+    font-weight: 500;
     background-color: rgba(255, 255, 255, 0.01);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
-/* Aesthetic Card & Tone Card */
-.aesthetic-card, .tone-card {
-    gap: 0.8rem;
-}
-
-/* Overview Card */
+/* Business Overview Card */
 .overview-card {
     gap: 0.8rem;
 }
 
 .overview-text {
     font-size: 0.88rem;
-    line-height: 1.6;
+    color: var(--text-main);
+    line-height: 1.55;
+}
+
+/* ABA 2: BUSINESS DETAILS */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+}
+
+.col-span-2-detail {
+    grid-column: span 2;
+}
+
+.detail-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 1.8rem;
+    min-height: 80px;
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.detail-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.title-with-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-icon {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    cursor: help;
+}
+
+/* Social Card Icons */
+.social-icons-preview {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.4rem;
+}
+
+.social-icon {
+    font-size: 0.92rem;
     color: var(--text-muted);
 }
 
-/* Project Footer */
-.project-footer {
-    text-align: center;
-    padding: 1.5rem 0;
-    color: var(--text-dark);
-    font-size: 0.78rem;
+/* Botões de Edição (Lápis) */
+.edit-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--accent-olive-bg);
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
-/* Links do GitHub no Design DNA */
-.brand-link-url {
-    color: #ffffff !important;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
+.edit-btn:hover {
+    background-color: #3b3f27;
+    transform: scale(1.05);
 }
 
-.brand-link-url:hover {
-    opacity: 0.8;
-    text-decoration: underline;
+.pen-icon {
+    font-size: 0.72rem;
+    color: var(--accent-olive-text);
 }
 
-.brand-url-container i.link-icon {
-    color: #ffffff;
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .card-row {
+        grid-template-columns: 1fr;
+    }
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+    .col-span-2-detail {
+        grid-column: span 1;
+    }
+    .colors-list {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+}
