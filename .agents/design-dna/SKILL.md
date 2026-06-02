@@ -46,7 +46,7 @@ Before writing the HTML, analyze the target project's design system or palette (
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Project DNA — Design_DNA</title>
+    <title>Your Project - Design_DNA</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
