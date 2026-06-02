@@ -474,3 +474,31 @@ body {
         gap: 1.5rem;
     }
 }
+
+/* Links de Referência nos Cards */
+.card-link-ref {
+    color: #ffffff !important; /* Em branco para facilitar a leitura */
+    font-size: 0.72rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.card-link-ref:hover {
+    opacity: 0.9;
+    text-decoration: underline;
+}
+
+.font-preview-item-link {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
+}
+
+.font-preview-item-link:hover {
+    transform: translateY(-2px);
+}
+
