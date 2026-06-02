@@ -135,6 +135,25 @@ td { padding: 10px; text-align: left; vertical-align: middle; }
 }
 
 @media print {
+    body {
+        counter-reset: page-number 5;
+    }
+    .page {
+        counter-increment: page-number;
+    }
+    .page-corte {
+        display: none !important;
+    }
+    .num-pagina {
+        display: none !important;
+    }
+    .page-numerada::after {
+        content: counter(page-number);
+        position: absolute;
+        top: 2cm;
+        right: 2cm;
+        font-size: 10pt;
+    }
     .tabs-control {
         display: none !important;
     }
@@ -150,10 +169,31 @@ td { padding: 10px; text-align: left; vertical-align: middle; }
     .lightbox, #image-lightbox {
         display: none !important;
     }
-    /* Evita quebras no meio de tabelas, caixas de código e diagramas */
-    table, tr, td, th, .code-box, .diagrama-container {
+    /* Evita quebras no meio de tabelas, wrappers, caixas de código e diagramas */
+    table, tr, td, th, .code-box, .diagrama-container, .tabela-wrapper {
         page-break-inside: avoid !important;
         break-inside: avoid !important;
+    }
+    /* Otimização de espaçamentos e fontes para evitar estouro de página */
+    table {
+        margin-bottom: 0.5cm !important;
+    }
+    th, td {
+        padding: 5px 8px !important;
+        font-size: 10pt !important;
+    }
+    p {
+        margin-bottom: 0.3cm !important;
+    }
+    .diagrama-container {
+        margin: 0.4cm 0 !important;
+    }
+    .code-box {
+        margin-bottom: 0.5cm !important;
+        padding: 10px !important;
+    }
+    .code-box pre {
+        font-size: 8.5pt !important;
     }
 }
 
@@ -244,6 +284,7 @@ td { padding: 10px; text-align: left; vertical-align: middle; }
 }
 
 /* Utilitários de Largura para Tabelas e Elementos */
+.tabela-wrapper { width: 100%; }
 .w-100 { width: 100%; }
 .col-width-12 { width: 12%; }
 .col-width-15 { width: 15%; }
