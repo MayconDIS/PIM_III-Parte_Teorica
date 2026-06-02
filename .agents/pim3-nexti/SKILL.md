@@ -130,6 +130,36 @@ corpo: (AUTOR, ANO). Continue o parágrafo normalmente.</p>
 </table>
 ```
 
+### Wrapper de Tabelas (Prevenir Quebras Órfãs)
+```html
+<div class="tabela-wrapper">
+    <p class="legenda-tabela">Tabela N – Título da Tabela</p>
+    <table>
+        <tr>
+            <th>Cabeçalho 1</th>
+            <th>Cabeçalho 2</th>
+        </tr>
+        <tr>
+            <td>Dado 1</td>
+            <td>Dado 2</td>
+        </tr>
+    </table>
+</div>
+```
+
+### Visualizador Modal Lightbox (Markup do Body)
+```html
+<!-- Inserir imediatamente antes de </body> -->
+<div id="image-lightbox" class="lightbox" role="dialog" aria-hidden="true" aria-label="Visualizador de Imagem">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fechar visualizador">&times;</button>
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Imagem ampliada do diagrama">
+        <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+</div>
+```
+
+
 ### Item do Sumário (ao adicionar nova seção)
 ```html
 <a href="#sec-X" class="sumario-link">
@@ -189,25 +219,25 @@ corpo: (AUTOR, ANO). Continue o parágrafo normalmente.</p>
 | ID | Título | Página |
 |---|---|---|
 | sec-1 | 1 INTRODUÇÃO | 6 |
-| sec-1-1 | 1.1 Objetivo Geral | 7 |
-| sec-1-2 | 1.2 Objetivos Específicos | 7 |
+| sec-1-1 | 1.1 Objetivo Geral | 6 |
+| sec-1-2 | 1.2 Objetivos Específicos | 6 |
 | sec-1-3 | 1.3 Contextualização do Projeto | 7 |
-| sec-2 | 2 DESENVOLVIMENTO | 8 |
-| sec-2-1 | 2.1 Etapa 1 – Negócio fictício | 8 |
+| sec-2 | 2 DESENVOLVIMENTO | 7 |
+| sec-2-1 | 2.1 Etapa 1 – Definição e caracterização do negócio fictício | 7 |
 | sec-2-1-1 | 2.1.1 Regras de Negócio | 8 |
-| sec-2-2 | 2.2 Etapa 2 – Engenharia de Software Ágil | 8 |
+| sec-2-2 | 2.2 Etapa 2 – Engenharia de Software Ágil Aplicada | 9 |
 | sec-2-2-1 | 2.2.1 Requisitos Funcionais e Não Funcionais | 9 |
-| sec-2-2-2 | 2.2.2 Product Backlog e Épicos | 10 |
+| sec-2-2-2 | 2.2.2 Product Backlog e Épicos | 11 |
 | sec-2-2-3 | 2.2.3 Gestão Visual e Quadro Kanban | 11 |
-| sec-2-3 | 2.3 Etapa 3 – Banco de Dados e NoSQL | 13 |
-| sec-2-4 | 2.4 Etapa 4 – POO em C# | 16 |
-| sec-2-5 | 2.5 Etapa 5 – Desenvolvimento Web Responsivo | 19 |
-| sec-2-6 | 2.6 Etapa 6 – UX e UI Design | 20 |
-| sec-2-7 | 2.7 Etapa 7 – Machine Learning e Análise de Dados | 21 |
-| sec-2-8 | 2.8 Etapa 8 – Comunicação, Liderança, Negociação e LIBRAS | 21 |
-| sec-2-9 | 2.9 Etapa 9 – Integração e avaliação final (UML) | 22 |
-| sec-3 | 3 CONCLUSÃO | 25 |
-| sec-ref | REFERÊNCIAS | 26 |
+| sec-2-3 | 2.3 Etapa 3 – Modelagem de Banco de Dados e NoSQL | 13 |
+| sec-2-4 | 2.4 Etapa 4 – Desenvolvimento do sistema com POO (C#) | 17 |
+| sec-2-5 | 2.5 Etapa 5 – Desenvolvimento Web Responsivo | 20 |
+| sec-2-6 | 2.6 Etapa 6 – UX e UI Design | 21 |
+| sec-2-7 | 2.7 Etapa 7 – Machine Learning e Análise de Dados | 23 |
+| sec-2-8 | 2.8 Etapa 8 – Comunicação e LIBRAS | 23 |
+| sec-2-9 | 2.9 Etapa 9 – Integração e avaliação final (Diagramas UML) | 23 |
+| sec-3 | 3 CONCLUSÃO | 27 |
+| sec-ref | REFERÊNCIAS | 28 |
 
 ---
 

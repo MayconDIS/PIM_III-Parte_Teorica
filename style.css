@@ -93,56 +93,12 @@ td { padding: 10px; text-align: left; vertical-align: middle; }
     tr { page-break-inside: avoid; break-inside: avoid; }
 }
 
-/* Abas Interativas dos Diagramas */
-.tabs-control {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 15px;
-}
-
-.tab-btn {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 6px 12px;
-    font-size: 9pt;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.tab-btn:hover {
-    background-color: #e0e0e0;
-}
-
-.tab-btn.active {
-    background-color: #333;
-    color: white;
-    border-color: #333;
-}
-
-.tab-content {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.tab-content.active {
-    display: block;
-    opacity: 1;
-}
-
 @media print {
     body {
         counter-reset: page-number 5;
     }
     .page {
         counter-increment: page-number;
-    }
-    .page-corte {
-        display: none !important;
     }
     .num-pagina {
         display: none !important;
@@ -153,18 +109,6 @@ td { padding: 10px; text-align: left; vertical-align: middle; }
         top: 2cm;
         right: 2cm;
         font-size: 10pt;
-    }
-    .tabs-control {
-        display: none !important;
-    }
-    .tab-content {
-        display: block !important;
-        opacity: 1 !important;
-        page-break-inside: avoid;
-        margin-bottom: 0.5cm !important;
-    }
-    .tab-content .diagrama-img {
-        max-height: 4.5cm !important;
     }
     .lightbox, #image-lightbox {
         display: none !important;
