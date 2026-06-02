@@ -495,3 +495,23 @@ body {
     opacity: 0.8;
     transform: translateY(-2px);
 }
+
+/* Links no Canto Superior Direito dos Cards */
+.card-top-link {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--link-cyan);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease, text-shadow 0.2s ease;
+}
+
+.card-top-link:hover {
+    opacity: 1;
+    text-shadow: 0 0 8px rgba(0, 230, 230, 0.4);
+}
