@@ -11,7 +11,6 @@
     <!-- FontAwesome para os ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- Favicon inline em Base64 (Frasco Erlenmeyer ciano #00e6e6 / preto-fundo #0b0c10 baseado no projeto Nex_TI) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMiAzMicgd2lkdGg9JzMyJyBoZWlnaHQ9JzMyJz48cmVjdCB3aWR0aD0nMzInIGhlaWdodD0nMzInIHJ4PSc4JyBmaWxsPScjMDBlNmU2JyAvPjxwYXRoIGQ9J00xMiA2aDh2MmgtMXYzLjVsNS41IDguMjVjLjYuOS43IDEuOC4zIDIuNjJjLS40LjgyLTEuMSAxLjYzLTIuMyAxLjYzSDkuNWMtMS4yIDAtMS45LS44MS0yLjMtMS42M2MtLjQtLjgyLS4zLTEuNzIuMy0yLjYyTDEzIDExLjVWOGgtMVY2em0xLjUgNS41bC01IDcuNWgxNWwtNS03LjVWOGgtNXYzLjV6JyBmaWxsPScjMGIwYzEwJyAvPjxwYXRoIGQ9J003LjcgMjAuM0wxMyAxNi41YzEuMi0uOCAyLjgtLjggNCAwbDQuMyAzYy44LjYgMS4zLjggMiAuOGMuNSAwIC45LS4xIDEuMi0uM2wuMS0uMWwtLjEuMmMtLjMuOC0xIDEuNy0yLjIgMS43SDkuNWMtMS4yIDAtMS45LS45LTIuMi0xLjdsLjQuOHpNOS41IDI0aDEzYzEuMiAwIDEuOS0uOCAyLjMtMS42Yy0xIC40LTIuMi4xLTMuMi0uNmwtNC4zLTNjLTEuNi0xLjEtMy44LTEuMS01LjQgMGwtNS4zIDMuOGMtLjguNi0xLjUuOC0yLjEuOEg5LjV6TTEzIDhoNnYyaC02Vjh6JyBmaWxsPScjMGIwYzEwJyAvPjwvc3ZnPg==">
 </head>
 <body>
@@ -47,23 +46,17 @@
 
                     <!-- Row 2: Add Logo + Fonts -->
                     <div class="card-row">
-                        <!-- Logo Card (SVG Geometria Neon embutido) -->
+                        <!-- Add Logo Card -->
                         <div class="dna-card logo-card">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" class="logo-svg" style="width: 100%; height: 100%; max-height: 80px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" class="logo-image" style="width: 100%; max-height: 80px;">
                                 <defs>
                                     <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
                                         <feGaussianBlur stdDeviation="6" result="blur" />
-                                        <feMerge>
-                                            <feMergeNode in="blur" />
-                                            <feMergeNode in="SourceGraphic" />
-                                        </feMerge>
+                                        <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
                                     </filter>
                                     <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
                                         <feGaussianBlur stdDeviation="8" result="blur" />
-                                        <feMerge>
-                                            <feMergeNode in="blur" />
-                                            <feMergeNode in="SourceGraphic" />
-                                        </feMerge>
+                                        <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
                                     </filter>
                                 </defs>
                                 <rect x="30" y="20" width="120" height="80" rx="8" fill="#18181c" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" />

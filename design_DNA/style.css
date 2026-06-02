@@ -363,13 +363,88 @@ body {
     line-height: 1.55;
 }
 
-/* Project Footer */
-.project-footer {
-    text-align: center;
-    padding: 1.5rem 0;
-    color: var(--text-dark);
-    font-size: 0.78rem;
+/* ABA 2: BUSINESS DETAILS */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
 }
+
+.col-span-2-detail {
+    grid-column: span 2;
+}
+
+.detail-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 1.8rem;
+    min-height: 80px;
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.detail-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.title-with-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-icon {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    cursor: help;
+}
+
+/* Social Card Icons */
+.social-icons-preview {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.4rem;
+}
+
+.social-icon {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+}
+
+/* Botões de Edição (Lápis) */
+.edit-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--accent-olive-bg);
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.edit-btn:hover {
+    background-color: #3b3f27;
+    transform: scale(1.05);
+}
+
+.pen-icon {
+    font-size: 0.72rem;
+    color: var(--accent-olive-text);
+}
+
+
 
 /* Animações */
 @keyframes fadeIn {
@@ -377,10 +452,18 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+
+
 /* Responsividade */
 @media (max-width: 768px) {
     .card-row {
         grid-template-columns: 1fr;
+    }
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+    .col-span-2-detail {
+        grid-column: span 1;
     }
     .colors-list {
         flex-wrap: wrap;
