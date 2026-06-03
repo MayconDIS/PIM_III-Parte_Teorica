@@ -226,7 +226,8 @@
     <section class="page page-numerada" aria-label="Banco de Dados">
         <span class="num-pagina">13</span>
         <h3 id="sec-2-3">2.3 Etapa 3 – Modelagem de Banco de Dados e NoSQL</h3>
-        <p class="paragrafo">Conforme a fundamentação teórica de sistemas de informação, optou-se pela utilização de Banco de Dados Relacional (SQL Server) para garantir as propriedades ACID (Atomicidade, Consistência, Isolamento e Durabilidade) no processamento das transações de moedas virtuais e XP. A estrutura relacional foi elaborada para integrar o fluxo de gamificação à complexidade de um banco de questões preparatórias, garantindo integridade referencial e segurança conforme os preceitos da LGPD.</p>
+        <p class="paragrafo">A especificação do subsistema de persistência da Nex_TI exigiu uma análise comparativa sob a ótica de sistemas de banco de dados, avaliando as necessidades de consistência contra a flexibilidade de esquema. Para o núcleo da plataforma, optou-se pelo modelo relacional estruturado no Microsoft SQL Server. A justificativa técnica baseia-se na necessidade estrita de garantir as propriedades transacionais ACID (Atomicidade, Consistência, Isolamento e Durabilidade). Em um ecossistema gamificado com consumo de itens e transações de moedas virtuais, a atomicidade impede que o saldo do usuário seja corrompido ou duplicado em cenários de acessos simultâneos.</p>
+        <p class="paragrafo">Ademais, a integridade referencial garantida pelo SQL Server através de restrições de chaves estrangeiras (FOREIGN KEY) e ações de deleção em cascata (ON DELETE CASCADE) é fundamental para sustentar as dependências complexas entre as entidades (como a exclusão automática de alternativas ao remover uma questão relacionada). Em contrapartida, avaliou-se que a tecnologia não-relacional (NoSQL), orientada a documentos como o MongoDB ou chave-valor como o Redis, seria aplicada em uma arquitetura híbrida de suporte. O Redis é adequado para o gerenciamento de sessões temporárias e cache do estado de decks de flashcards em tempo real, enquanto o MongoDB seria empregado para a persistência de logs de acesso e auditoria não-estruturados, onde a velocidade de gravação e flexibilidade do esquema superam a necessidade de transações relacionais.</p>
 
         <div class="tabela-wrapper">
             <h4 class="mb-05cm">Dicionário de Dados Resumido</h4>
@@ -356,7 +357,11 @@ CREATE TABLE tb_prova_questao (
     <section class="page page-numerada" aria-label="POO Parte 1">
         <span class="num-pagina">17</span>
         <h3 id="sec-2-4">2.4 Etapa 4 – Desenvolvimento do sistema com POO (C#)</h3>
-        <p class="paragrafo">A estrutura lógica foi modelada em C# (.NET 10) fundamentada nos quatro pilares da Programação Orientada a Objetos: Abstração, Encapsulamento, Herança e Polimorfismo. A superclasse Usuário garante a abstração de comportamentos em comum e encapsula propriedades sensíveis, restringindo alterações não autorizadas ao estado do objeto (Figura 7).</p>
+        <p class="paragrafo">A modelagem do software foi concebida na linguagem C# (.NET 10) fundamentada nos quatro pilares essenciais da Programação Orientada a Objetos:</p>
+        <p class="paragrafo"><strong>Abstração:</strong> Representada na criação da superclasse <code>Usuario</code> (Figura 7), que isola as características e comportamentos comuns a todos os agentes do sistema, como identificação, nome e credenciais de acesso, ocultando os detalhes operacionais complexos da rotina de autenticação.</p>
+        <p class="paragrafo"><strong>Encapsulamento:</strong> Aplicado para blindar os estados internos das classes contra modificações não autorizadas. Na classe <code>Aluno</code> (Figura 8), as propriedades como <code>XP</code> e <code>Moedas</code> possuem acessores restritos (leitura pública e escrita privada), forçando com que qualquer alteração de saldo passe exclusivamente por métodos de negócio validados, preservando as regras de recompensa.</p>
+        <p class="paragrafo"><strong>Herança:</strong> Utilizada para promover a reutilização de código e a especialização comportamental. As subclasses <code>Aluno</code> e <code>Tutor</code> (Figura 8) herdam todos os atributos e o construtor da classe base <code>Usuario</code>, estendendo suas capacidades para seus respectivos escopos funcionais de estudo e gerenciamento.</p>
+        <p class="paragrafo"><strong>Polimorfismo:</strong> Expressado conceitualmente na flexibilidade de assinaturas de métodos de controle e interfaces de serviço do motor matemático (como a <code>ISm2Engine</code>), onde diferentes implementações podem responder ao mesmo contrato lógico de cálculo de repetição, assegurando flexibilidade e desacoplamento na arquitetura do sistema.</p>
         
         <div class="code-box">
             <pre><code>Figura 7 – Classe Base em C#
@@ -502,7 +507,20 @@ public class Program {
     <section class="page page-numerada" aria-label="Acessibilidade e ML">
         <span class="num-pagina">23</span>
         <h3 id="sec-2-7">2.7 Etapa 7 – Machine Learning e Análise de Dados</h3>
-        <p class="paragrafo">A aplicação gera inteligência a partir dos dados através do algoritmo matemático SM-2. Ele analisa indicadores de desempenho do usuário, como acurácia e tempo de resposta, e ajusta as datas de retomada do conteúdo (repetição espaçada). Futuramente, estes relatórios estruturados alimentarão modelos de <em>machine learning</em> globais para predição de risco de reprovação e recomendação preditiva de trilhas de estudo.</p>
+        <p class="paragrafo">A plataforma Nex_TI implementa o algoritmo SuperMemo-2 (SM-2) como o motor matemático para combater cientificamente a Curva do Esquecimento formulada por Hermann Ebbinghaus. O algoritmo calcula de forma personalizada a próxima data de revisão dos flashcards com base no histórico de respostas e na avaliação subjetiva da facilidade do conceito feita pelo usuário (escala de 0 a 5).</p>
+        <p class="paragrafo">O cálculo do SM-2 é regido pelas seguintes equações matemáticas:</p>
+        <p class="paragrafo">1. <strong>Fator de Facilidade (EF):</strong> Mede o nível de complexidade do card. Ao receber uma nota de qualidade <i>q</i> de 0 a 5, o Fator de Facilidade é atualizado pela fórmula:</p>
+        <div class="code-box" style="padding: 10px; margin-bottom: 10px;">
+            <pre style="margin: 0; white-space: pre-wrap;"><code>EF' = EF + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02))</code></pre>
+        </div>
+        <p class="paragrafo">O valor inicial de EF é igual a 2.5. Se o resultado do cálculo de EF' for inferior a 1.3, o algoritmo trava o valor do fator em 1.3 para evitar que o card entre em um ciclo de repetição infinito.</p>
+        <p class="paragrafo">2. <strong>Intervalo de Revisão (I):</strong> Determina a quantidade de dias até o card ser exibido novamente. O intervalo I em dias é calculado com base no número de repetições bem-sucedidas (<i>n</i>):</p>
+        <ul style="margin-left: 2cm; margin-bottom: 10px; list-style-type: disc;">
+            <li>Para <i>n</i> = 1: I(1) = 1 dia</li>
+            <li>Para <i>n</i> = 2: I(2) = 6 dias</li>
+            <li>Para <i>n</i> &gt; 2: I(<i>n</i>) = I(<i>n</i>-1) * EF' (arredondado para o inteiro mais próximo)</li>
+        </ul>
+        <p class="paragrafo">Caso a nota de qualidade <i>q</i> atribuída seja inferior a 3 (considerada resposta incorreta ou esquecimento), as repetições acumuladas <i>n</i> são reiniciadas para 0, o intervalo de dias I retorna para 1 dia e o Fator de Facilidade EF é preservado. Este fluxo de dados estruturados gerado na tabela <code>tb_flashcards_sm2</code> acumula o histórico de revisões que servirá para treinar modelos preditivos de <i>Machine Learning</i>, visando alertar os tutores sobre riscos de reprovação ou desmotivação de usuários individuais.</p>
         
         <h3 id="sec-2-8">2.8 Etapa 8 – Comunicação e LIBRAS</h3>
         <p class="paragrafo">Garantindo a acessibilidade digital, o projeto integrou atributos essenciais da iniciativa WAI-ARIA. O sistema apresenta leitura de rótulos por software assistivo (aria-label), indicativos nativos de processamento e opções de redimensionamento e contraste exigidos pelas normativas inclusivas.</p>
