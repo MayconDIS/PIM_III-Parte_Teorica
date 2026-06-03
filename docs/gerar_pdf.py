@@ -155,200 +155,200 @@ def gerar_apresentacao(output_path):
     pdf.add_slide_title("1", "Caracterizacao do Negocio (Etapa 1)")
     pdf.ln(1)
     
-    pdf.add_bullet_point('Conteudo do Slide', 'Visao geral da EdTech (Tecnologia Educacional) Nex_TI, regras e limites do negocio.')
-    pdf.add_bullet_point('Modelo SaaS', 'Monetizacao SaaS (Software as a Service - Software como Servico) por assinaturas recorrentes.')
-    pdf.add_bullet_point('Regras de Negocio', 'RN01 (Regra de Negocio 01 - recompensas ao fim do deck), perfis e economia estetica.')
+    pdf.add_bullet_point('Caracterizacao', 'Startup fictícia de tecnologia educacional (EdTech) voltada ao nivelamento acadêmico de estudantes de TI.')
+    pdf.add_bullet_point('Objetivo Pedagogico', 'Aplicação de estudo ativo por flashcards para fixação e memorização de conceitos técnicos básicos.')
+    pdf.add_bullet_point('Regras de Negocio', 'RN01 (bonificação de XP e moedas condicionada à conclusão total do deck), perfis de acesso e limites de uso.')
     pdf.ln(2.0)
     
     pdf.add_script_fala(
-        'Ola, professores. O nosso projeto conceitua a Nex_TI, uma startup de TI (Tecnologia da Informacao) focada em resolver a alta evasao de calouros que se assustam com a enxurrada de jargoes tecnicos. Projetamos uma plataforma de nivelamento academico via flashcards com faturamento SaaS (Software as a Service - Software como Servico). Para manter as regras de negocio, modelamos a RN01 (Regra de Negocio 01): o aluno so ganha moedas e XP (Pontos de Experiencia) ao fechar todo o deck no figma.'
+        'Ola, professores. O nosso projeto desenvolve a Nex_TI, uma empresa ficticia de tecnologia educacional voltada ao nivelamento academico de alunos ingressantes em cursos de TI. Projetamos uma plataforma de estudo ativo para mitigar a evasao escolar e facilitar o aprendizado de conceitos basicos. Estabelecemos como regra de negocio principal que a bonificacao em experiencia e moedas virtuais ocorra apenas apos o encerramento completo do ciclo de flashcards.'
     )
     
     pdf.add_defesa_divider()
-    pdf.add_defesa('Como voces justificam a RN01 (Regra de Negocio 01) no prototipo Figma?',
-                   'Para impedir cheating (trapaças) no visual do Figma. Obrigar a conclusao total da rodada garante que o ciclo de repeticao espacada atue corretamente no cerebro do aluno.')
-    pdf.add_defesa('Quem e o Publico-Alvo e como funciona a comercializacao B2B?',
-                   'Faculdades contratam para calouros no modelo B2B (Business to Business - Empresa para Empresa) por pacotes de licenças, e estudantes avulsos assinam mensalmente no modelo B2C (Business to Consumer - Empresa para Consumidor).')
+    pdf.add_defesa('Como voces justificam a RN01 (Atribuicao de Recompensas) no fluxo do sistema?',
+                   'Para assegurar que o estudante conclua o ciclo de revisao programado, garantindo que o algoritmo de repeticao espacada atue de forma eficaz na memorizacao, sem interrupcoes parciais da atividade.')
+    pdf.add_defesa('Quem e o Publico-Alvo e qual o modelo operacional da plataforma?',
+                   'O publico-alvo sao estudantes ingressantes na area de tecnologia. O modelo de negocio e de assinatura, atendendo tanto a instituicoes de ensino interessadas no nivelamento de turmas (B2B) quanto a usuarios individuais (B2C).')
 
     # ==================== PÁGINA 2: SLIDE 2 ====================
     pdf.add_page()
     pdf.add_slide_title("2", "Engenharia de Requisitos & LGPD (Etapa 2)")
     pdf.ln(1)
     
-    pdf.add_bullet_point('Conteudo do Slide', 'Mapeamento de Requisitos, backlog do produto, Kanban (Quadro Visual) e a LGPD.')
-    pdf.add_bullet_point('Requisitos', 'RFs (Requisitos Funcionais - login, responder decks) e RNFs (Requisitos Nao Funcionais - responsividade e acessibilidade).')
-    pdf.add_bullet_point('LGPD e Kanban', 'Backlog priorizado em Fibonacci. Consentimento por checkbox e senhas com hash criptografico SHA-256 (Algoritmo de Hash Seguro).')
+    pdf.add_bullet_point('Conteudo', 'Levantamento de requisitos, organizacao do backlog de produto e diretrizes de conformidade com a LGPD.')
+    pdf.add_bullet_point('Requisitos', 'Classificacao em funcionais (autenticacao, motor de flashcards) e nao funcionais (responsividade, acessibilidade e criptografia).')
+    pdf.add_bullet_point('Conformidade e Estimativas', 'Pontuacao do backlog usando a sequencia de Fibonacci e implementacao de termos de consentimento e criptografia hash SHA-256.')
     pdf.ln(2.0)
     
     pdf.add_script_fala(
-        'Nesta etapa, nos planejamos a engenharia de requisitos de forma agil, mapeando o que o usuario faz (Requisitos Funcionais) e criterios de qualidade (Requisitos Nao Funcionais), como responsividade e acessibilidade. Usamos a sequencia de Fibonacci no Kanban (Quadro Visual) do Trello. A privacidade atende a LGPD (Lei Geral de Protecao de Dados): projetamos no Figma o consentimento e hash SHA-256 para senhas.'
+        'Nesta etapa, estruturamos a engenharia de requisitos do projeto. Mapeamos os requisitos funcionais para descrever os comportamentos do sistema e os nao funcionais para estabelecer os parametros de acessibilidade e desempenho. A organizacao das tarefas foi feita por meio de rituais ageis com estimativas baseadas na escala de Fibonacci. Para estar em conformidade com a LGPD, incluimos o fluxo de consentimento na interface e definimos o uso de hash SHA-256 para a persistencia segura das senhas.'
     )
     
     pdf.add_defesa_divider()
-    pdf.add_defesa('Como voces estimaram e priorizaram as tarefas do backlog do produto?',
-                   'Usamos a sequencia de Fibonacci nos rituais de planejamento: tarefas visuais conhecidas (Figma de login) ganharam peso 3, e tarefas logicas complexas (calculo do SM-2) ganharam peso 8.')
-    pdf.add_defesa('Como a LGPD (Lei Geral de Protecao de Dados) aparece de forma concreta no seu projeto?',
-                   'Modelamos o checkbox de consentimento de privacidade na tela de cadastro do Figma e criptografia hash SHA-256 no banco de dados para que ninguem leia as senhas em texto puro.')
+    pdf.add_defesa('Como foi realizada a estimativa e priorizacao das historias de usuario no backlog?',
+                   'Utilizamos a escala de Fibonacci para pontuar a complexidade. Atividades focadas na interface receberam pontuacoes menores, enquanto logicas complexas, como o motor matematico do SM-2, receberam maior peso.')
+    pdf.add_defesa('Como a LGPD foi integrada no projeto?',
+                   'Projetamos no fluxo do cadastro a coleta de consentimento explicito dos termos de privacidade e, no banco de dados, estabelecemos o armazenamento seguro de credenciais via hash criptografico SHA-256.')
 
     # ==================== PÁGINA 3: SLIDE 3 ====================
     pdf.add_page()
     pdf.add_slide_title("3", "Modelagem de Banco de Dados (Etapa 3)")
     pdf.ln(1)
     
-    pdf.add_bullet_point('Conteudo do Slide', 'Projeto relacional do banco de dados estruturado no Microsoft SQL Server.')
-    pdf.add_bullet_point('Estrutura ACID', 'SQL Server garante propriedades ACID (Atomicidade, Consistencia, Isolamento, Durabilidade) no saldo de moedas.')
-    pdf.add_bullet_point('Normalizacao e Cascade', 'Tabelas em 1FN/2FN/3FN (Formas Normais). Exclusao em cascata no DDL (Linguagem de Definicao de Dados) das alternativas.')
+    pdf.add_bullet_point('Conteudo', 'Projeto logico e fisico do banco de dados estruturado no Microsoft SQL Server.')
+    pdf.add_bullet_point('Transacoes e Consistencia', 'Adocao do modelo relacional para assegurar as propriedades ACID nas operacoes de pontuacao.')
+    pdf.add_bullet_point('Normalizacao', 'Tabelas estruturadas na 1a, 2a e 3a Formas Normais, aplicando restricoes de integridade e delecao em cascata.')
     pdf.ln(2.0)
     
     pdf.add_script_fala(
-        'Para a persistencia de dados, projetamos a base no Microsoft SQL Server. Optamos pelo modelo relacional para garantir as propriedades transacionais ACID (Atomicidade, Consistencia, Isolamento, Durabilidade), impedindo que o saldo de moedas virtuais dos calouros apresente inconsistencias. Normalizamos as tabelas nas Formas Normais e implementamos a delecao em cascata nas alternativas no script DDL fisico.'
+        'Para a persistencia de dados, projetamos o banco relacional utilizando o Microsoft SQL Server. O modelo relacional garante a aplicacao das propriedades transacionais ACID, assegurando que operacoes envolvendo a pontuacao e os dados de usuarios ocorram com integridade absoluta. Normalizamos as entidades nas Formas Normais e implementamos chaves estrangeiras com acao de exclusao em cascata para evitar dados orfaos.'
     )
     
     pdf.add_defesa_divider()
-    pdf.add_defesa('Por que nao usaram um banco NoSQL (Não Relacional, como MongoDB) para o core do sistema?',
-                   'Como o aluno consome moedas para comprar itens na loja, precisamos de garantias transacionais rigidas ACID. NoSQL tem maior risco de gerar inconsistencias no saldo em acessos simultaneos.')
-    pdf.add_defesa('Qual a vantagem pratica do ON DELETE CASCADE que voces modelaram?',
-                   'Se o tutor apagar uma questao do banco de dados, o SQL Server apaga na hora todas as alternativas daquela questao de forma automatica no script DDL, evitando lixo relacional e dados orfaos.')
+    pdf.add_defesa('Por que optar por um banco de dados relacional em vez de uma abordagem nao relacional?',
+                   'Pela necessidade de garantias transacionais estritas nas operacoes financeiras da loja virtual e pelo alto acoplamento relacional entre usuarios, flashcards e questoes, cenario em que os bancos SQL fornecem maior consistencia e controle de integridade.')
+    pdf.add_defesa('Qual a vantagem pratica da modelagem de exclusao em cascata?',
+                   'Garantir a integridade referencial de forma automatica. Ao remover uma questao, suas alternativas relacionadas na tabela dependente sao automaticamente eliminadas pelo banco, evitando inconsistencias e lixo logico.')
 
     # ==================== PÁGINA 4: SLIDE 4 ====================
     pdf.add_page()
     pdf.add_slide_title("4", "Programacao Orientada a Objetos (Etapa 4)")
     pdf.ln(1)
     
-    pdf.add_bullet_point('Conteudo do Slide', 'Modelagem conceitual de classes no Astah UML e mapeamento conceitual em C#.')
-    pdf.add_bullet_point('Heranca e UML', 'Superclasse Usuario herdada por Aluno (com moedas/XP) e Tutor. Desenhado no Astah UML.')
-    pdf.add_bullet_point('Encapsulamento e SOLID', 'Escrita privada (private set) nos saldos de Aluno. Mapeamento de SRP (Principio da Responsabilidade Unica) do SOLID.')
+    pdf.add_bullet_point('Conteudo', 'Modelagem de classes no Astah UML e implementacao na linguagem C# (.NET 10).')
+    pdf.add_bullet_point('Heranca e Polimorfismo', 'Especializacao da classe abstrata Usuario em subclasses de Aluno e Tutor, promovendo reutilizacao de codigo.')
+    pdf.add_bullet_point('Encapsulamento e SOLID', 'Restricao de escrita direta em atributos de pontuacao e aplicacao do Principio de Responsabilidade Unica (SRP) no motor de calculo.')
     pdf.ln(2.0)
     
     pdf.add_script_fala(
-        'A arquitetura de POO (Programacao Orientada a Objetos) foi desenhada visualmente no software Astah UML e mapeada para o C# .NET 10. Criamos a classe base Usuario e aplicamos herança para estender as classes Aluno e Tutor, reaproveitando codigo. Para garantir a seguranca das regras de pontos, aplicamos encapsulamento limitando a escrita do XP e moedas via private set. E planejamos o SOLID isolando o SM-2 em ISm2Engine.'
+        'A modelagem de classes foi desenhada no Astah UML e implementada em C#. Estruturamos a superclasse Usuario, aplicando heranca para estender os perfis de Aluno e Tutor. O encapsulamento foi empregado para proteger as propriedades de saldo de experiencia e moedas por meio de modificadores de acesso restritos. Alem disso, aplicamos conceitos do SOLID, isolando o calculo do SM-2 em um servico independente.'
     )
     
     pdf.add_defesa_divider()
-    pdf.add_defesa('Onde e como voces criaram e planejaram essas classes do projeto?',
-                   'Modelamos toda a arquitetura conceitual de classes visualmente no software **Astah UML** (Linguagem de Modelagem Unificada), definindo atributos, tipos de dados e heranca. Exportamos esse blueprint para o código C#.')
-    pdf.add_defesa('Como o encapsulamento protege o saldo de moedas do Aluno no codigo?',
-               'Os campos de saldo possuem escrita privada (private set). Outras classes nao conseguem alterar o saldo de moedas do aluno de fora; sao obrigadas a passar pelo metodo AdicionarMoedas().')
+    pdf.add_defesa('Como o modelo conceitual foi planejado e traduzido para o codigo?',
+                   'Elaboramos o diagrama de classes no Astah UML detalhando tipos, atributos e relacionamentos. Essa estrutura serviu de base direta para a codificacao das entidades em C#.')
+    pdf.add_defesa('De que forma o encapsulamento protege as regras de negocio no codigo?',
+                   'Os atributos de pontuacao possuem escrita privada. Alteracoes nesses valores so podem ser feitas de forma controlada atraves de metodos especificos expostos pela propria classe.')
 
     # ==================== PÁGINA 5: SLIDE 5 ====================
     pdf.add_page()
     pdf.add_slide_title("5", "Desenvolvimento Web Responsivo (Etapa 5)")
     pdf.ln(1)
     
-    pdf.add_bullet_point('Conteudo do Slide', 'Projetagem de pagina unica (SPA), CSS Puro (Vanilla) e a monografia em HTML/CSS.')
-    pdf.add_bullet_point('SPA Vanilla', 'Carregamento dinâmico sem frameworks via fetch com a API transferindo dados de flashcards em JSON.')
-    pdf.add_bullet_point('Grid, Flexbox e ABNT', 'CSS Grid para a estrutura cartesiana (dashboard) e Flexbox para menus. Reset de impressao com @media print no CSS para ABNT.')
+    pdf.add_bullet_point('Conteudo', 'Desenvolvimento do frontend em formato SPA (Single Page Application) utilizando tecnologias nativas (HTML5, CSS3 e JavaScript).')
+    pdf.add_bullet_point('Arquitetura SPA', 'Consumo assincrono das APIs com transferencia de dados de flashcards estruturados em JSON.')
+    pdf.add_bullet_point('Estilizacao e Layout', 'Emprego de CSS Grid para a estrutura geral do painel e Flexbox para os componentes de menu. Configuracao de estilo de impressao ABNT por @media print.')
     pdf.ln(2.0)
     
     pdf.add_script_fala(
-        'Projetamos o frontend como SPA (Single Page Application - Aplicacao de Pagina Unica) em HTML (Linguagem de Marcacao) e CSS (Folha de Estilo) puro, garantindo carregamento sem atritos. Adotamos CSS Grid para a estrutura do dashboard e Flexbox para organizar os menus. O diferencial do grupo foi programar a monografia academica em index.html e style.css seguindo as normas ABNT via @media print.'
+        'Desenvolvemos o frontend no formato de Single Page Application, dispensando frameworks pesados para garantir um carregamento otimizado. O layout utiliza CSS Grid na divisao das secoes do dashboard e Flexbox no alinhamento dos componentes de navegacao. Um diferencial do projeto foi a formatacao das paginas academicas diretamente no CSS atraves da folha de estilo de impressao, atendendo as normas da ABNT.'
     )
     
     pdf.add_defesa_divider()
-    pdf.add_defesa('Por que optaram por Vanilla JavaScript e nao frameworks como React ou Bootstrap?',
-                   'Para garantir carregamento leve no celular e controle absoluto de design do portal. Isso nos permitiu configurar o reset de impressao @media print de forma nativa e sem interferencia externa.')
-    pdf.add_defesa('Como Grid e Flexbox se dividem na responsividade do portal?',
-                   'CSS Grid organiza a grade maior (dashboard e Mapa Neural) e Flexbox organiza menus e botoes. Nas media queries do style.css, empilhamos as colunas do Grid em telas pequenas para celulares.')
+    pdf.add_defesa('Qual a justificativa para a escolha de Javascript Vanilla em detrimento de frameworks modernos?',
+                   'Permitir o controle absoluto do estilo e um carregamento leve para dispositivos moveis, alem de facilitar a criacao nativa do estilo de impressao ABNT via CSS puro.')
+    pdf.add_defesa('Como foi dividida a aplicacao de Grid e Flexbox no layout?',
+                   'O CSS Grid foi aplicado para a estruturacao bidimensional de grandes blocos do dashboard. O Flexbox foi reservado para o alinhamento unidimensional de itens internos, como botoes de controle e cabeçalhos de menus.')
 
     # ==================== PÁGINA 6: SLIDE 6 ====================
     pdf.add_page()
     pdf.add_slide_title("6", "UX/UI Design & Heurísticas (Etapa 6)")
     pdf.ln(1)
     
-    pdf.add_bullet_point('Conteudo do Slide', 'Modelagem no Figma, jornada da persona e Heuristicas de usabilidade.')
-    pdf.add_bullet_point('Modelagem Figma', 'Desenho das telas no Figma com Design System (--alura-cyan) e affordance (cards com sombra).')
-    pdf.add_bullet_point('Heuristicas aplicadas', 'Cinco regras de Nielsen: Correspondencia (mapa Obsidian View), Consistencia, Controle do usuario, Feedback visual (hud de XP) e Prevencao de erros.')
+    pdf.add_bullet_point('Conteudo', 'Prototipagem da interface no Figma, mapeamento da jornada do usuario e aplicacao de heuristicas de usabilidade.')
+    pdf.add_bullet_point('Prototipo de Alta Fidelidade', 'Criacao do design system com cores consistentes e feedbacks visuais claros para o usuario.')
+    pdf.add_bullet_point('Heuristicas de Nielsen', 'Aplicacao de principios como consistencia estetica, controle do usuario e correspondencia com o mundo real no Mapa Neural de estudos.')
     pdf.ln(2.0)
     
     pdf.add_script_fala(
-        'A usabilidade e o prototipo de alta fidelidade das telas de Login, Cadastro e Dashboard foram desenhados no Figma. Focamos em uma persona de 18 a 20 anos iniciante em TI. No Figma, desenhamos telas de alta fidelidade e aplicamos Heuristicas de Nielsen. A principal delas e a Correspondencia com o mundo real no Mapa Neural (Obsidian View) para o progresso de estudos da persona.'
+        'Elaboramos os prototipos de alta fidelidade no Figma, modelando as jornadas com foco na nossa persona de estudantes iniciantes em TI. Aplicamos as heuristicas de usabilidade de Nielsen para garantir uma navegacao intuitiva: destacamos a correspondencia com o mundo real na visualizacao em forma de mapa mental de estudos e a consistencia visual em todos os elementos da interface.'
     )
     
     pdf.add_defesa_divider()
-    pdf.add_defesa('Onde as telas de usabilidade do projeto foram desenhadas?',
-                   'Modelamos toda a interface de usabilidade (UX - Experiencia do Usuario) e o prototipo interativo (UI - Interface do Usuario) das telas no software **Figma**, definindo a tipografia e cores.')
-    pdf.add_defesa('Como as Heurísticas de Nielsen aparecem no visual do Figma?',
-                   'Exemplos: Correspondencia (mapa mental Obsidian), Consistencia (cores e botoes unificados), Controle (botao Voltar sem barreiras), Feedback (HUD de moedas brilhando) e Prevencao de erros (confirmacao).')
+    pdf.add_defesa('Onde e como foi estruturado o prototipo do sistema?',
+                   'As telas e fluxos de interacao do sistema foram desenhados e validados no Figma, estabelecendo a base visual antes do desenvolvimento.')
+    pdf.add_defesa('Como as Heurísticas de Nielsen foram representadas no prototipo?',
+                   'Atraves da Consistencia de cores e fontes, do Controle do usuario com fluxos de retorno simples, e do Feedback constante do sistema, como as notificacoes de acerto e atualizacao de progresso.')
 
     # ==================== PÁGINA 7: SLIDE 7 ====================
     pdf.add_page()
     pdf.add_slide_title("7", "Machine Learning & Dados (Etapa 7)")
     pdf.ln(1)
     
-    pdf.add_bullet_point('Conteudo do Slide', 'Algoritmo SM-2 combatendo a curva de esquecimento de Hermann Ebbinghaus.')
-    pdf.add_bullet_point('Projetagem SM-2', 'Formula matematica do SM-2 (Algoritmo SuperMemo 2) calcula o intervalo de revisao em dias com base no feedback de facilidade (nota 0 a 5).')
-    pdf.add_bullet_point('Machine Learning', 'Massa de dados de revisoes a ser salva na tb_flashcards_sm2 servira para treinar modelos de ML (Machine Learning - Aprendizado de Maquina) no futuro.')
+    pdf.add_bullet_point('Conteudo', 'Aplicacao do algoritmo de repeticao espacada SuperMemo-2 (SM-2) para auxilio na retencao de conteudo.')
+    pdf.add_bullet_point('Logica do Algoritmo', 'Ajuste dinamico dos intervalos de revisao (em dias) com base no desempenho e facilidade fornecido pelo usuario (escala de 0 a 5).')
+    pdf.add_bullet_point('Estrutura de Dados', 'Registro do historico de estudos na tabela de flashcards para futuras analises estatisticas de engajamento.')
     pdf.ln(2.0)
     
     pdf.add_script_fala(
-        'Para tornar o estudo ativo e eficiente, projetamos o algoritmo matematico SM-2, que combate cientificamente a Curva de Esquecimento de Ebbinghaus. Quando o aluno responde um flashcard e atribui nota de facilidade de 0 a 5, a formula calcula o Fator de Facilidade e o intervalo de dias. Nota 5 oculta o card por 6 dias e nota 1 faz reaparecer amanha. Planejamos esses dados para treinar modelos preditivos no futuro.'
+        'Para auxiliar na retencao do conhecimento tecnico, integramos o algoritmo SM-2. Quando o estudante responde a um flashcard e atribui uma classificacao de facilidade, a logica recalcula o Fator de Facilidade e agenda a proxima data de revisao. O armazenamento desses dados estruturados viabiliza a geracao de relatorios de desempenho e fornece a base de dados para analises preditivas futuras.'
     )
     
     pdf.add_defesa_divider()
-    pdf.add_defesa('Como o algoritmo SM-2 funciona na modelagem conceitual do calculo?',
-                   'O algoritmo usa a nota (0 a 5) dada pelo aluno para atualizar o Fator de Facilidade. Se a nota for alta (facil), o intervalo de revisao em dias aumenta; se for baixa (dificil), o card reaparece rapido.')
-    pdf.add_defesa('Como voces pretendem usar esses dados para Machine Learning (ML)?',
-                   'No proximo semestre (PIM IV), usaremos a tabela tb_flashcards_sm2 para treinar modelos preditivos de ML (Machine Learning - Aprendizado de Maquina) para alertar se o aluno corre risco de reprovacao.')
+    pdf.add_defesa('Como o algoritmo SM-2 define os intervalos das revisoes?',
+                   'O algoritmo utiliza a classificacao de facilidade inserida pelo usuario para calibrar o Fator de Facilidade. Avaliacoes melhores aumentam progressivamente o intervalo entre as revisoes, enquanto dificuldades frequentes reduzem o tempo de retorno do card.')
+    pdf.add_defesa('Como a modelagem proposta se relaciona com o aprendizado de maquina?',
+                   'A persistencia estruturada do historico de revisoes acumula a massa de dados necessaria para treinar modelos preditivos voltados a identificar previamente riscos de desinteresse academico.')
 
     # ==================== PÁGINA 8: SLIDE 8 ====================
     pdf.add_page()
     pdf.add_slide_title("8", "Acessibilidade & LIBRAS (Etapa 8)")
     pdf.ln(1)
     
-    pdf.add_bullet_point('Conteudo do Slide', 'Acessibilidade universal no portal, WAI-ARIA e VLibras.')
-    pdf.add_bullet_point('Tags WAI-ARIA', 'Atributos (aria-label, role, aria-selected) na monografia index.html garantem leitura de botoes por leitores de tela.')
-    pdf.add_bullet_point('VLibras e Zoom', 'CSS responsivo Grid/Flexbox suporta zoom de ate 200% sem quebras de layout. Planejada traducao para LIBRAS (Lingua Brasileira de Sinais) via VLibras (avatar 3D).')
+    pdf.add_bullet_point('Conteudo', 'Diretrizes de acessibilidade aplicadas a interface do portal em conformidade com as normas web.')
+    pdf.add_bullet_point('Navegacao Assistiva', 'Utilizacao de atributos WAI-ARIA (aria-label, role) para garantir a leitura correta por leitores de tela.')
+    pdf.add_bullet_point('Responsividade e Suporte Visual', 'Dimensionamento dinamico via CSS que suporta zoom de ate 200% e planejamento de integracao de traducao de LIBRAS via widget digital.')
     pdf.ln(2.0)
     
     pdf.add_script_fala(
-        'A acessibilidade digital foi projetada nos mockups do Figma e codificada no HTML5 semântico da monografia. Injetamos rotulos acessiveis WAI-ARIA (Aplicacoes de Internet Rica Acessiveis) nas acoes de controle, garantindo que deficientes visuais naveguem com leitores de tela. O layout responsivo Grid/Flexbox suporta zoom de 200% sem distorcer o site. E prevemos a traducao para LIBRAS com o VLibras.'
+        'A acessibilidade foi projetada na interface do portal. Codificamos as paginas utilizando elementos semânticos do HTML5 e atributos WAI-ARIA, o que permite a correta interpretacao do sistema por leitores de tela. Alem disso, a estruturacao responsiva em Grid e Flexbox garante que a ampliacao visual da tela ocorra de forma consistente, permitindo tambem a integracao de widgets de traducao de LIBRAS.'
     )
     
     pdf.add_defesa_divider()
-    pdf.add_defesa('O que sao as etiquetas WAI-ARIA e onde estao aplicadas no site?',
-                   'Atributos (Iniciativa de Acessibilidade da Web) que dizem a leitores de tela o que os botoes fazem. Exemplo: no botao de seta para passar o flashcard, colocamos aria-label="Passar para proximo flashcard" para leitores.')
-    pdf.add_defesa('Como trataram a acessibilidade para pessoas com baixa visao?',
-                   'Usamos cores com contraste WCAG (Diretrizes de Acessibilidade) e layouts flexiveis Grid/Flexbox. Se o usuario aumentar a fonte no navegador em ate 200%, as tabelas se reorganizam sem cortar textos.')
+    pdf.add_defesa('Qual a funcao dos atributos WAI-ARIA implementados?',
+                   'Eles fornecem metadados adicionais a leitores de tela, indicando o papel e a funcao de componentes interativos que nao possuem tags HTML nativas equivalentes.')
+    pdf.add_defesa('Como foi tratada a responsividade sob a otica de acessibilidade?',
+                   'Utilizamos unidades flexiveis e grids fluidos que se ajustam sem sobrepor textos ou quebrar o layout, mesmo quando o usuario aumenta o zoom do navegador para baixa visao.')
 
     # ==================== PÁGINA 9: SLIDE 9 ====================
     pdf.add_page()
     pdf.add_slide_title("9", "Integracao & Modelagem UML (Etapa 9)")
     pdf.ln(1)
     
-    pdf.add_bullet_point('Conteudo do Slide', 'Integracao conceitual e consistência lógica de diagramacao UML no Astah.')
-    pdf.add_bullet_point('Diagramas no Astah', 'Diagrama de Classes (planta estatica de POO C#), Diagrama de Casos de Uso (limites) e Diagrama de Sequencia (tempo).')
-    pdf.add_bullet_point('Consistencia Logica', 'UML (Linguagem de Modelagem Unificada) garante que o visual do Figma, a logica em C# e o banco SQL Server se comuniquem perfeitamente.')
+    pdf.add_bullet_point('Conteudo', 'Modelagem de sistemas via UML (Unified Modeling Language) desenvolvida no Astah.')
+    pdf.add_bullet_point('Diagramas Estruturais e Dinamicos', 'Uso do Diagrama de Casos de Uso (limites), Diagrama de Classes (arquitetura estrutural de objetos) e Diagrama de Sequencia (fluxo de mensagens).')
+    pdf.add_bullet_point('Consistencia Arquitetural', 'Validacao visual dos fluxos de dados do prototipo com os modelos relacionais e logicos do software.')
     pdf.ln(2.0)
     
     pdf.add_script_fala(
-        'Para integrar e validar toda a consistência logica da plataforma, criamos os diagramas UML (Linguagem de Modelagem Unificada) no software Astah UML. O Diagrama de Casos de Uso delimita as fronteiras de acesso de Aluno, Tutor e Admin; o Diagrama de Classes planeja a modelagem conceitual estatica em C#; e o Diagrama de Sequencia desenha o fluxo dinâmico cronologico das requisicoes.'
+        'Para garantir a consistência do sistema, realizamos a modelagem UML no software Astah. O Diagrama de Casos de Uso delimita os escopos e as acoes permitidas para cada perfil; o Diagrama de Classes define a estrutura logica e os relacionamentos do codigo C#; e o Diagrama de Sequencia ilustra a troca cronologica de mensagens entre a interface e o banco de dados.'
     )
     
     pdf.add_defesa_divider()
-    pdf.add_defesa('Qual a importância do Diagrama de Sequência UML no projeto?',
-                   'Mostrar a ordem cronológica e a troca de mensagens entre o cliente web, a lógica do backend C# e as atualizações físicas no banco de dados SQL Server, provando a viabilidade de rotas.')
-    pdf.add_defesa('Como Figma, Astah UML e banco de dados se relacionam no PIM III?',
-                   'O Figma define a usabilidade das telas; o Astah UML planeja a arquitetura estática/dinâmica (Classes e Sequências); e o SQL Server e C# dão os modelos e rotinas que unificam o PIM III.')
+    pdf.add_defesa('Qual a importância do Diagrama de Sequencia no projeto?',
+                   'Ele mapeia o fluxo temporal das interacoes, comprovando a viabilidade tecnica das requisicoes entre a interface do usuario, a logica de negocio e as consultas ao banco de dados.')
+    pdf.add_defesa('Como os diagramas UML auxiliam na consistência do projeto?',
+                   'Eles unificam a especificacao tecnica, garantindo que a implementacao de banco de dados, o comportamento orientado a objetos em C# e o prototipo de telas sigam a mesma especificacao logica.')
 
     # ==================== PÁGINA 10: METODOLOGIA DE GRUPO ====================
     pdf.add_page()
     pdf.add_slide_title("10", "Metodologia Scrum & Escopo (Scrum)")
     pdf.ln(1)
     
-    pdf.add_bullet_point('Conteudo do Slide', 'Rituais de sprints, manuais complementares e definicao realista de escopo.')
-    pdf.add_bullet_point('Rituais Scrum', 'Sprints de 1 semana registradas em 10 atas. Kanban no Trello. Scrum Masters rotativos (Gabriel e Maciel).')
-    pdf.add_bullet_point('Fronteira de Escopo', 'O 3º Semestre foca na prototipagem no Figma e modelagem lógica no Astah. Módulos complexos de simulados ENADE e loja sao escopo do PIM IV.')
+    pdf.add_bullet_point('Conteudo', 'Gestao do projeto com framework Scrum, coordenacao de tarefas e divisao de escopo.')
+    pdf.add_bullet_point('Rituais Scrum', 'Sprints semanais documentadas em atas de reuniao, monitoramento do progresso por quadro Kanban e divisao de responsabilidades.')
+    pdf.add_bullet_point('Divisao de Escopo', 'Delimitacao da entrega do PIM III focada na modelagem conceitual, prototipagem e especificacao tecnica, preparando o desenvolvimento fisico do portal.')
     pdf.ln(2.0)
     
     pdf.add_script_fala(
-        'Para concluir, organizamos nosso trabalho em Sprints de uma semana com rituais Scrum semanais registrados em 10 atas e Kanban no Trello, com lideranca rotativa de Scrum Master. Criamos manuais de Execucao, Pratico e Tecnico para a extensao. Delimitamos que a entrega do 3º semestre consiste nos prototipos do Figma e na modelagem logica do Astah, sendo o codigo funcional total escopo do PIM IV.'
+        'Finalizando, a gestao do projeto utilizou rituais ageis com sprints semanais e monitoramento continuo por meio do Kanban. Dividimos o escopo estabelecendo que o foco do PIM III seria a modelagem arquitetural (UML, Banco e Prototipo de Alta Fidelidade) e a base logica inicial, ficando o desenvolvimento completo e a validacao em producao programados para a proxima fase do projeto.'
     )
     
     pdf.add_defesa_divider()
-    pdf.add_defesa('Como voces se organizaram e gerenciaram impedimentos no grupo?',
-                   'Usamos sprints de 1 semana e reuniões semanais de Sprint Planning e Review no Discord para atualizar o Kanban do Trello, organizando tarefas por responsaveis de forma transparente.')
-    pdf.add_defesa('Como definiram a divisao de escopo entre o PIM III e o PIM IV?',
-                   'Delimitamos nos manuais e README que a programacao do banco relacional de simulados e loja e escopo do PIM IV (Projeto Integrado Multidisciplinar IV), entregando agora os prototipos Figma e modelagem UML no Astah.')
+    pdf.add_defesa('Como o grupo lidou com impedimentos no fluxo de trabalho agil?',
+                   'As reunioes semanais serviram para revisar as entregas do Kanban e redistribuir atividades em caso de atraso de dependências, garantindo que o cronograma fosse cumprido.')
+    pdf.add_defesa('Como foi justificado o escopo atual em relacao as fases futuras?',
+                   'Mapeamos os requisitos fundamentais do MVP para esta entrega academica e documentamos nos manuais que a integracao de funcionalidades secundarias de simulados e loja sera completada no proximo periodo letivo.')
 
     # Salva o arquivo PDF
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
