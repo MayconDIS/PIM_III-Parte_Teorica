@@ -651,6 +651,7 @@ public class Program {
             const closeBtn = document.getElementById('lightbox-close');
             
             const diagramImages = document.querySelectorAll('.diagrama-img');
+            let currentScale = 1.0;
             
             diagramImages.forEach(img => {
                 img.addEventListener('click', () => {
@@ -666,6 +667,10 @@ public class Program {
                     lightboxImg.setAttribute('alt', alt);
                     lightboxCaption.textContent = captionText;
                     
+                    currentScale = 1.0;
+                    lightboxImg.style.transform = 'scale(1)';
+                    lightboxImg.style.transition = ''; // Usa a transição do CSS para animação de abertura
+                    
                     lightbox.classList.add('active');
                     lightbox.setAttribute('aria-hidden', 'false');
                     document.body.style.overflow = 'hidden'; // Impede scroll do body
@@ -680,6 +685,9 @@ public class Program {
                     lightboxImg.setAttribute('src', '');
                     lightboxImg.setAttribute('alt', '');
                     lightboxCaption.textContent = '';
+                    lightboxImg.style.transform = '';
+                    lightboxImg.style.transition = '';
+                    currentScale = 1.0;
                 }, 200); // Aguarda o fim da animação de fade-out
             }
             
@@ -697,6 +705,25 @@ public class Program {
                     closeLightbox();
                 }
             });
+
+            // Lógica de Zoom com Ctrl + Scroll do Mouse
+            lightbox.addEventListener('wheel', (e) => {
+                if (lightbox.classList.contains('active') && e.ctrlKey) {
+                    e.preventDefault(); // Impede o zoom nativo da página
+                    
+                    lightboxImg.style.transition = 'transform 0.08s ease-out'; // Transição rápida para zoom suave
+                    
+                    if (e.deltaY < 0) {
+                        currentScale += 0.1; // Zoom In (Scroll para frente)
+                    } else {
+                        currentScale -= 0.1; // Zoom Out (Scroll para trás)
+                    }
+                    
+                    // Limita o zoom entre 0.6x e 4.0x para usabilidade
+                    currentScale = Math.max(0.6, Math.min(currentScale, 4.0));
+                    lightboxImg.style.transform = `scale(${currentScale})`;
+                }
+            }, { passive: false });
         });
     </script>
 </body>
